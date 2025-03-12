@@ -20,6 +20,9 @@ private slots:
     void ajouterClient();  // Add a client
     void afficherClients(); // Display clients
     void supprimerClient(); // Delete a client
+    void modifierClient();
+    void nextPage();
+    void prevPage();
 
 private:
     Ui::MainWindow *ui;

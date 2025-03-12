@@ -1,7 +1,7 @@
 #ifndef CLIENT_H
 #define CLIENT_H
 
-#include <Qstring>
+#include <QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
 
@@ -9,37 +9,36 @@ class Client
 {
 private:
     int id;
-    std::string name;
-    std::string address;
-    std::string phone;
-    std::string email;
-    std::string nom_entreprise;
+    QString name;
+    QString address;
+    QString phone;
+    QString email;
+    QString nom_entreprise;
     int nbr_consultation;
 
 public:
 
-    Client(int id, const std::string &name, const std::string &address,
-           const std::string &phone, const std::string &email,
-           const std::string &nom_entreprise, int nbr_consultation);
-
+    Client(int id, const QString &name, const QString &address,
+           const QString &phone, const QString &email,
+           const QString &nom_entreprise, int nbr_consultation);
 
     int getId() const;
     void setId(int id);
 
-    std::string getName() const;
-    void setName(const std::string &name);
+    QString getName() const;
+    void setName(const QString &name);
 
-    std::string getAddress() const;
-    void setAddress(const std::string &address);
+    QString getAddress() const;
+    void setAddress(const QString &address);
 
-    std::string getPhone() const;
-    void setPhone(const std::string &phone);
+    QString getPhone() const;
+    void setPhone(const QString &phone);
 
-    std::string getEmail() const;
-    void setEmail(const std::string &email);
+    QString getEmail() const;
+    void setEmail(const QString &email);
 
-    std::string getNomEntreprise() const;
-    void setNomEntreprise(const std::string &nom_entreprise);
+    QString getNomEntreprise() const;
+    void setNomEntreprise(const QString &nom_entreprise);
 
     int getNbrConsultation() const;
     void setNbrConsultation(int nbr_consultation);
@@ -47,7 +46,7 @@ public:
     bool ajouter();
     QSqlQueryModel* afficher();
     bool supprimer(int id);
-
+    bool modifier(int id);  // Added the modifier function
 };
 
 #endif // CLIENT_H
