@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>123456.png</file>
+        <file>add_treatment.jpg</file>
+        <file>admin.png</file>
+        <file>assetss.qrc</file>
+        <file>clients.png</file>
+        <file>delete-client.png</file>
+        <file>femme.png</file>
+        <file>homePic.png</file>
+        <file>homme.png</file>
+        <file>kine.png</file>
+        <file>loginBk.png</file>
+        <file>logoo.png.jfif</file>
+        <file>number_equipment.png</file>
+        <file>ressources.qrc</file>
+        <file>secretary.png</file>
+        <file>solid care white version.png</file>
+        <file>treatment_update.jpg</file>
+        <file>treatments_amount.png</file>
+        <file>ttqqq-removebg-preview.png</file>
+    </qresource>
+</RCC>
