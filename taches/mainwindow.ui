@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1069</width>
+    <height>623</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-70</x>
+      <y>-80</y>
+      <width>1131</width>
+      <height>771</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix1/abstract-paper-background-concept.jpg);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_7">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>301</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>301</width>
+      <height>511</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;  /* Center the title */
+    padding: 0 10px;
+    background-color: rgba(0,0,0,0,);  /* Yellow background for the title */
+    color: rgb(255, 255, 255)ck;
+    font-weight: bold;
+    border-radius: 4px;
+}
+QGroupBox {
+    background-color: transparent;  /* Transparent to blend with the rest of the interface */
+    border: 2px solid rgba(0,0,0,0,);  /* Yellow border to match the rest */
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 10px;
+}
+QLineEdit {
+    background-color: transparent;  /* Make the input fields transparent */
+    border: 2px solid rgba(248, 248, 147, 255);  /* Yellow border to maintain consistency */
+    border-radius: 8px;  /* Rounded corners for a smooth look */
+    padding: 5px;  /* Padding to give space inside the input */
+    color: white;  /* Text color to ensure visibility */
+    font-size: 14px;  /* Adjust font size */
+}
+
+QLineEdit:focus {
+    border: 2px solid rgba(255, 255, 147, 255);  /* Brighter border when the input is focused */
+    background-color: rgba(255, 255, 255, 0.2);  /* Light translucent background on focus */
+}
+QLabel {
+    color: black;  /* Text color to match the interface */
+    background-color: transparent;  /* Transparent background */
+    font-weight: bold;  /* Bold text to make the labels stand out */
+    font-size: 14px;  /* Adjust the font size */
+    padding: 5px;  /* Add some space around the label */
+}
+
+QLabel:hover {
+    color: rgba(248, 248, 147, 255);  /* Yellow text on hover */
+}
+</string>
+    </property>
+    <property name="title">
+     <string>ajouter un tache</string>
+    </property>
+    <widget class="QLabel" name="label_33">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>120</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>NOM</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_34">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>180</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>DESCRIPTION</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_35">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>250</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>DATEE</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="description">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>180</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="priorite">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>300</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_36">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>310</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PRIORITE</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="nom">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>120</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_37">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>370</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>STATUT</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="statut">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>360</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ajoute">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>440</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background: none;
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background: none;
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background: none;
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+
+QPushButton:focus {
+    outline: none; /* Supprime l'effet de focus (contour) */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>ajouter</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="modifier">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>440</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+     </property>
+     <property name="text">
+      <string>modifier</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="datee">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>250</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>0</y>
+      <width>191</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+image: url(:/new/prefix3/result.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>10</y>
+      <width>101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/new/prefix5/ttqqq-removebg-preview.png);
+image: url(:/new/prefix5/ttqqq-removebg-preview.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTableView" name="aff">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>170</y>
+      <width>621</width>
+      <height>321</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="idedit">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>510</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sup">
+    <property name="geometry">
+     <rect>
+      <x>368</x>
+      <y>509</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>supprimer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="recuperer">
+    <property name="geometry">
+     <rect>
+      <x>518</x>
+      <y>509</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>afficher</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1069</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
