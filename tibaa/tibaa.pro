@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql printsupport widgets charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,11 +12,13 @@ SOURCES += \
     connection.cpp \
     main.cpp \
     mainwindow.cpp \
+    piechartwidget.cpp \
     ressource.cpp
 
 HEADERS += \
     connection.h \
     mainwindow.h \
+    piechartwidget.h \
     ressource.h
 
 FORMS += \

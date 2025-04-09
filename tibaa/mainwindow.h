@@ -24,6 +24,14 @@ private slots:
     void on_sup_clicked();
     void on_recuperer_clicked();
 
+    void on_chercher_clicked();
+
+    void on_stat_clicked();
+
+    void on_tri_clicked();
+
+    void on_pdf_clicked();
+
 private:
     Ui::MainWindow *ui;
     ressource r;

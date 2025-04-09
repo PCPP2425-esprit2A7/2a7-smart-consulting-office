@@ -37,8 +37,8 @@ public:
     QSqlQueryModel* trier(const QString& critere, bool ascendant = true);
     QSqlQueryModel* rechercher(const QString& keyword);
     QString genererContenuPDF();
-    void genererPDF(const QString& fichierPDF);
-
+    bool genererPDF(const QString& fichierPDF);
+  QMap<QString, int> obtenirStatistiques();
 private:
     int id_res;
     QString nom;

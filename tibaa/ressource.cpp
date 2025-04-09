@@ -1,5 +1,6 @@
 #include "ressource.h"
 #include "connection.h"
+#include "piechartwidget.h"
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QVariant>
@@ -7,6 +8,7 @@
 #include <QSqlQueryModel>
 #include <QDebug>
 #include <QPdfWriter>
+#include <QPrinter>
 #include <QPainter>
 #include <QFile>
 #include <QTextDocument>
@@ -101,8 +103,8 @@ QSqlQueryModel* ressource::afficher() {
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("Fournisseur"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Coût"));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Quantité"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Quantité"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Coût"));
     model->setHeaderData(5, Qt::Horizontal, QObject::tr("État"));
     model->setHeaderData(6, Qt::Horizontal, QObject::tr("Téléphone Fournisseur"));
 
@@ -204,8 +206,8 @@ bool ressource::update(int id_res, const QString &nom, const QString &fournisseu
     return true;
 }
 
-// Méthode pour trier les ressources
-/*QSqlQueryModel* ressource::trier(const QString& critere, bool ascendant) {
+//Méthode pour trier les ressources
+QSqlQueryModel* ressource::trier(const QString& critere, bool ascendant) {
     QSqlQuery query;
     QString queryString = "SELECT * FROM RESSOURCES";
 
@@ -359,7 +361,7 @@ QString ressource::genererContenuPDF() {
 }
 
 // Méthode pour générer le PDF
-void ressource::genererPDF(const QString& fichierPDF) {
+bool ressource::genererPDF(const QString& fichierPDF) {
     QString contenuHTML = genererContenuPDF();  // Récupérer le contenu HTML généré
 
     QTextDocument document;
@@ -376,4 +378,30 @@ void ressource::genererPDF(const QString& fichierPDF) {
 
     // Imprimer le document dans le fichier PDF
     document.print(&printer);
-}*/
+    if (!printer.isValid()) {
+        qDebug() << "Erreur: Imprimante invalide";
+        return false;
+    }
+
+    document.print(&printer);
+
+    if (!QFile::exists(fichierPDF)) {
+        qDebug() << "Erreur: Fichier PDF non créé";
+        return false;
+    }
+
+    return true;
+
+}
+QMap<QString, int> ressource::obtenirStatistiques() {
+    QMap<QString, int> stats;
+    QSqlQuery query;
+    query.prepare("SELECT etat, COUNT(*) FROM RESSOURCES GROUP BY etat");
+
+    if (query.exec()) {
+        while (query.next()) {
+            stats.insert(query.value(0).toString(), query.value(1).toInt());
+        }
+    }
+    return stats;
+}
