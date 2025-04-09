@@ -18,9 +18,7 @@
     <qresource prefix="/new/prefix1">
         <file>abstract-paper-background-concept.jpg</file>
     </qresource>
-    <qresource prefix="/new/prefix2">
-        <file>5024147-removebg-preview.png</file>
-    </qresource>
+    <qresource prefix="/new/prefix2"/>
     <qresource prefix="/new/prefix3">
         <file>result.png</file>
     </qresource>

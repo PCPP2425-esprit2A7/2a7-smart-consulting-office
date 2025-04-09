@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1069</width>
-    <height>623</height>
+    <width>1061</width>
+    <height>719</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -440,14 +440,302 @@ QPushButton:pressed {
      <string>afficher</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="viewhistory">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>500</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>history</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="tri">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>120</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>tri</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pdf">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>120</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>pdf</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stat">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>120</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>stat</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cherche">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>70</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chercher">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>70</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>cherche</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Trie">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>80</y>
+      <width>76</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>id</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>datee</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="calendarButton">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>500</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>calandrier</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1069</width>
-     <height>22</height>
+     <width>1061</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>

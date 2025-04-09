@@ -4,6 +4,7 @@
 #include <QString>
 #include <QSqlQueryModel>
 #include <QDate>
+#include <QMap>
 
 class tache
 {
@@ -36,7 +37,18 @@ public:
     QSqlQueryModel* trier(const QString& critere, bool ascendant = true);
     QSqlQueryModel* rechercher(const QString& keyword);
     QString genererContenuPDF();
-    void genererPDF(const QString& fichierPDF);
+    bool genererPDF(const QString& fichierPDF); // Changé de void à bool
+    QMap<QString, int> obtenirStatistiques();
+    static QSqlQueryModel* gettHistory();
+    static QSqlQueryModel* getHistory(int tacheId);
+    static QList<tache> getTasksForDate(const QDate &date);
+    static QList<tache> getUpcomingTasks(int daysAhead);
+    static bool setTaskDependency(int taskId, int dependsOnId);
+    static QList<int> getTaskDependencies(int taskId);
+
+private:
+    static void logHistory(int tacheId, const QString &action, const QString &changes = "");
+    static QString serializeTacheData(const tache &t);
 
 private:
     int id;
