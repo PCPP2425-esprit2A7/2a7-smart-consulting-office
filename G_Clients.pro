@@ -4,8 +4,9 @@
 #
 #-------------------------------------------------
 
-QT += sql
+QT += sql gui
 CONFIG += console
+QT += charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,7 +30,7 @@ SOURCES += \
     client.cpp \
     connection.cpp \
         main.cpp \
-        mainwindow.cpp \
+        mainwindow.cpp
 
 
 HEADERS += \

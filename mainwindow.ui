@@ -14,83 +14,90 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">/* Style général de la fenêtre */
+   <string notr="true">/* General application styling */
 QWidget {
-    background-color: #F0F4F8;
-    color: #333;
-    font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
-    font-size: 11pt; /* Légèrement réduit pour un aspect plus professionnel */
+    background-color: #E6F7FB;
+    color: #1A2C79;
+    font-family: 'Inter', 'Segoe UI', 'Open Sans', sans-serif;
+    font-size: 10.5pt;
 }
 
 /* Labels */
 QLabel {
-    color: #1E3A5F; /* Bleu plus profond pour un aspect plus sérieux */
-    font-size: 14pt;
-    font-weight: 600; /* Moins gras que bold pour plus d’élégance */
+    color: #1A2C79;
+    font-size: 12pt;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
-/* Champs de saisie */
+/* Line edits (inputs) */
 QLineEdit {
     background-color: #FFFFFF;
-    border: 2px solid #B0BEC5; /* Gris bleu plus raffiné */
+    border: 1.5px solid #00B4D8;
     border-radius: 6px;
-    padding: 6px;
-    color: #333;
-    font-size: 11pt;
+    padding: 5px 8px;
+    color: #1A2C79;
+    font-size: 10.5pt;
 }
 QLineEdit:focus {
-    border: 2px solid #1E88E5; /* Bleu plus vibrant au focus */
-    box-shadow: 0px 0px 5px rgba(30, 136, 229, 0.5);
+    border: 1.5px solid #1A2C79;
+    box-shadow: 0px 0px 4px rgba(26, 44, 121, 0.3);
 }
 
-/* Boutons */
+/* Buttons */
 QPushButton {
-    background-color: #1E88E5;
-    border: 2px solid #1565C0; /* Bordure plus marquée pour l'élégance */
-    border-radius: 8px;
-    padding: 8px;
-    font-size: 13pt;
-    font-weight: 600;
-    color: white;
-    transition: background 0.3s, box-shadow 0.3s;
+    background-color: #1A2C79;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 11pt;
+    font-weight: 500;
+    color: #FFFFFF;
 }
 QPushButton:hover {
-    background-color: #1565C0;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    background-color: #243D9B;
 }
 QPushButton:pressed {
-    background-color: #0D47A1;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: #12205C;
 }
 
-/* Tableaux */
+/* Tables */
 QTableWidget {
-    border: 2px solid #B0BEC5;
+    background-color: #FFFFFF;
+    border: 1.5px solid #90E0EF;
     border-radius: 6px;
-    gridline-color: #90A4AE;
-    background-color: white;
+    gridline-color: #ADE8F4;
+    font-size: 10pt;
 }
 QHeaderView::section {
-    background-color: #1E88E5;
+    background-color: #1A2C79;
     color: white;
-    padding: 6px;
-    border: 1px solid #1565C0;
-    font-size: 12pt;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 10.5pt;
+    border: none;
 }
 
-/* Barre de défilement */
+/* Scrollbars */
 QScrollBar:vertical {
-    background: #E0E7EC;
-    width: 12px;
-    border-radius: 6px;
+    background: #D0F0F8;
+    width: 10px;
+    border-radius: 5px;
 }
 QScrollBar::handle:vertical {
-    background: #1E88E5;
-    border-radius: 6px;
+    background: #00B4D8;
+    border-radius: 5px;
 }
 QScrollBar::handle:vertical:hover {
-    background: #1565C0;
-}</string>
+    background: #009AC2;
+}
+
+/* Central widget */
+#centralwidget {
+    background-color: #B0E9F4;
+}
+
+</string>
   </property>
   <property name="toolButtonStyle">
    <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
@@ -99,91 +106,21 @@ QScrollBar::handle:vertical:hover {
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>1411</width>
-      <height>831</height>
+      <x>110</x>
+      <y>40</y>
+      <width>1111</width>
+      <height>631</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="Ajouter">
-     <widget class="QFrame" name="frame_2">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>80</y>
-        <width>221</width>
-        <height>431</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
-      </property>
-      <widget class="QWidget" name="verticalLayoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>201</width>
-         <height>401</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <widget class="QPushButton" name="pushButton_5">
-          <property name="text">
-           <string>Consultants</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_6">
-          <property name="text">
-           <string>Projets</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_7">
-          <property name="text">
-           <string>Clients</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_8">
-          <property name="text">
-           <string>Formations</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_9">
-          <property name="text">
-           <string>Taches</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_4">
-          <property name="text">
-           <string>Resources</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>80</y>
+        <x>50</x>
+        <y>30</y>
         <width>481</width>
         <height>431</height>
        </rect>
@@ -197,7 +134,7 @@ QScrollBar::handle:vertical:hover {
          <x>10</x>
          <y>40</y>
          <width>441</width>
-         <height>281</height>
+         <height>321</height>
         </rect>
        </property>
        <layout class="QFormLayout" name="formLayout">
@@ -261,6 +198,16 @@ QScrollBar::handle:vertical:hover {
         <item row="5" column="1">
          <widget class="QLineEdit" name="lineEdit_phone"/>
         </item>
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="lineEdit_cin"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>CIN Client</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
       <widget class="QPushButton" name="btnAfficher">
@@ -290,115 +237,50 @@ QScrollBar::handle:vertical:hover {
        </property>
       </widget>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QCalendarWidget" name="calendarWidget">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>0</y>
-        <width>101</width>
-        <height>71</height>
+        <x>590</x>
+        <y>60</y>
+        <width>441</width>
+        <height>281</height>
        </rect>
       </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap>../../Desktop/WISEDESK 2.0.png</pixmap>
+      <property name="styleSheet">
+       <string notr="true">QCalendarWidget {
+    background-color: #FFFFFF;
+    border: 1.5px solid #90E0EF;
+    border-radius: 6px;
+}
+
+QCalendarWidget QAbstractItemView:enabled {
+    selection-background-color: #1A2C79; /* Deep navy for selected dates */
+    selection-color: white; /* White text for the selected date */
+    color: #1A2C79;
+}
+
+QCalendarWidget QAbstractItemView:selected {
+    background-color: #00B4D8; /* Cyan color for selected date */
+    color: white;
+}
+
+QCalendarWidget QAbstractItemView:focus {
+    border: 2px solid #00B4D8;
+}
+
+QCalendarWidget QAbstractItemView:!enabled {
+    color: #D0D0D0; /* Grey for disabled dates */
+}
+</string>
       </property>
      </widget>
     </widget>
     <widget class="QWidget" name="Afficher">
-     <widget class="QFrame" name="frame_3">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>80</y>
-        <width>221</width>
-        <height>461</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
-      </property>
-      <widget class="QWidget" name="verticalLayoutWidget_15">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>201</width>
-         <height>401</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_15">
-        <item>
-         <widget class="QPushButton" name="pushButton_18">
-          <property name="text">
-           <string>Consultants</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_19">
-          <property name="text">
-           <string>Projets</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_20">
-          <property name="text">
-           <string>Clients</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_21">
-          <property name="text">
-           <string>Formations</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_22">
-          <property name="text">
-           <string>Taches</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_23">
-          <property name="text">
-           <string>Resources</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QLabel" name="label_8">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>101</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap>../../Desktop/WISEDESK 2.0.png</pixmap>
-      </property>
-     </widget>
      <widget class="QGroupBox" name="groupBox_2">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>80</y>
+        <x>80</x>
+        <y>40</y>
         <width>971</width>
         <height>511</height>
        </rect>
@@ -420,8 +302,8 @@ QScrollBar::handle:vertical:hover {
      <widget class="QPushButton" name="btnSupprimer">
       <property name="geometry">
        <rect>
-        <x>1080</x>
-        <y>610</y>
+        <x>870</x>
+        <y>570</y>
         <width>121</width>
         <height>41</height>
        </rect>
@@ -430,31 +312,11 @@ QScrollBar::handle:vertical:hover {
        <string>Supprimer</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_id_suppression">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>30</y>
-        <width>181</width>
-        <height>24</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_nbr_consultation">
-      <property name="geometry">
-       <rect>
-        <x>630</x>
-        <y>30</y>
-        <width>181</width>
-        <height>24</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QPushButton" name="btnAfficher_1">
       <property name="geometry">
        <rect>
-        <x>940</x>
-        <y>610</y>
+        <x>740</x>
+        <y>570</y>
         <width>121</width>
         <height>41</height>
        </rect>
@@ -466,8 +328,8 @@ QScrollBar::handle:vertical:hover {
      <widget class="QPushButton" name="btnModifier">
       <property name="geometry">
        <rect>
-        <x>800</x>
-        <y>610</y>
+        <x>610</x>
+        <y>570</y>
         <width>121</width>
         <height>41</height>
        </rect>
@@ -476,89 +338,68 @@ QScrollBar::handle:vertical:hover {
        <string>Modifier</string>
       </property>
      </widget>
-    </widget>
-    <widget class="QWidget" name="Modifier">
-     <widget class="QFrame" name="frame_4">
+     <widget class="QPushButton" name="btnExportPDF">
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>80</y>
-        <width>221</width>
-        <height>461</height>
+        <y>570</y>
+        <width>121</width>
+        <height>41</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+      <property name="text">
+       <string>Export (PDF)</string>
       </property>
-      <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
-      </property>
-      <widget class="QWidget" name="verticalLayoutWidget_16">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>201</width>
-         <height>401</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_16">
-        <item>
-         <widget class="QPushButton" name="pushButton_24">
-          <property name="text">
-           <string>Consultants</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_25">
-          <property name="text">
-           <string>Projets</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_26">
-          <property name="text">
-           <string>Clients</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_27">
-          <property name="text">
-           <string>Formations</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_28">
-          <property name="text">
-           <string>Taches</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_29">
-          <property name="text">
-           <string>Resources</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
      </widget>
+     <widget class="QPushButton" name="sortButton">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>570</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Trier (Date)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditCIN">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>0</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="searchButton">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>0</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Chercher</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Modifier">
      <widget class="QGroupBox" name="groupBox_3">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>70</y>
+        <x>140</x>
+        <y>60</y>
         <width>481</width>
         <height>431</height>
        </rect>
       </property>
       <property name="title">
-       <string>AJOUTER CLIENT</string>
+       <string>MODIFIER CLIENT</string>
       </property>
       <widget class="QWidget" name="formLayoutWidget_2">
        <property name="geometry">
@@ -566,7 +407,7 @@ QScrollBar::handle:vertical:hover {
          <x>10</x>
          <y>40</y>
          <width>441</width>
-         <height>281</height>
+         <height>283</height>
         </rect>
        </property>
        <layout class="QFormLayout" name="formLayout_2">
@@ -630,6 +471,16 @@ QScrollBar::handle:vertical:hover {
         <item row="5" column="1">
          <widget class="QLineEdit" name="lineEdit_phone_2"/>
         </item>
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="lineEdit_cin2"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>CIN CLient</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
       <widget class="QPushButton" name="btnConfirmer">
@@ -645,6 +496,18 @@ QScrollBar::handle:vertical:hover {
         <string>Confirmer</string>
        </property>
       </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Chart">
+     <widget class="QGraphicsView" name="chartViewWidget">
+      <property name="geometry">
+       <rect>
+        <x>245</x>
+        <y>91</y>
+        <width>601</width>
+        <height>421</height>
+       </rect>
+      </property>
      </widget>
     </widget>
    </widget>
@@ -674,6 +537,16 @@ QScrollBar::handle:vertical:hover {
      <string>Suivant</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="lineEdit_nbr_consultation">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>10</y>
+      <width>181</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -681,7 +554,7 @@ QScrollBar::handle:vertical:hover {
      <x>0</x>
      <y>0</y>
      <width>1521</width>
-     <height>25</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>
