@@ -34,7 +34,7 @@ public:
     QSqlQueryModel* afficher();
     static bool exists(int id);
 
-    QSqlQueryModel* trier(const QString& critere, bool ascendant = true);
+    QSqlQueryModel* trier(const QString& critere, const QString& ass);
     QSqlQueryModel* rechercher(const QString& keyword);
     QString genererContenuPDF();
     bool genererPDF(const QString& fichierPDF); // Changé de void à bool

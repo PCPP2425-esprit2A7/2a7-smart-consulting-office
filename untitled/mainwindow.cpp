@@ -24,8 +24,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->aff->setModel(model);
 
     // Initialisation du calendrier
-    calendar = new Calendrier(this);
-    calendar->hide();
+    calendar = new Calendrier();
+    calendar->setWindowFlags(Qt::Window | Qt::WindowCloseButtonHint);
+    calendar->setWindowTitle("Task Calendar");
 
     // Connexion explicite du bouton calendrier
     connect(ui->calendarButton, &QPushButton::clicked, this, &MainWindow::on_calendarButton_clicked);
@@ -39,14 +40,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_calendarButton_clicked()
 {
-    if (calendar->isVisible()) {
-        calendar->hide();
-    } else {
-        calendar->show();
-        calendar->loadTasks();
-    }
-}
 
+        calendar->show();
+        calendar->raise();  // Bring to front
+        calendar->activateWindow();  // Give focus
+        calendar->loadTasks();
+
+}
 void MainWindow::on_ajoute_clicked()
 {
     QString nom = ui->nom->text().trimmed();
@@ -202,9 +202,12 @@ void MainWindow::on_tri_clicked()
 {
     tache t;
     QString critere = ui->Trie->currentText().toLower();
-    bool ascendant = true; // Tri ascendant par défaut
 
-    QSqlQueryModel* model = t.trier(critere, ascendant);
+    QString ass = ui->ass->currentText().toLower();
+
+
+
+    QSqlQueryModel* model = t.trier(critere,ass);
     if (model) {
         ui->aff->setModel(model);
         ui->aff->resizeColumnsToContents();

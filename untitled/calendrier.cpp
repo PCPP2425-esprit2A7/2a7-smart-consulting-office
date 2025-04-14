@@ -14,6 +14,8 @@ Calendrier::Calendrier(QWidget *parent) : QWidget(parent)
     loadTasks();
 
     // Check for overdue tasks every hour
+    setMinimumSize(600, 500);
+    setWindowModality(Qt::ApplicationModal);
     QTimer *reminderTimer = new QTimer(this);
     connect(reminderTimer, &QTimer::timeout, this, &Calendrier::checkForOverdueTasks);
     reminderTimer->start(3600000); // 1 hour

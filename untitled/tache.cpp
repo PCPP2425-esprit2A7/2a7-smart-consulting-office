@@ -93,8 +93,8 @@ QSqlQueryModel* tache::afficher() {
 
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Description"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Date"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Description"));
     model->setHeaderData(4, Qt::Horizontal, QObject::tr("Priorité"));
     model->setHeaderData(5, Qt::Horizontal, QObject::tr("Statut"));
 
@@ -269,7 +269,7 @@ QSqlQueryModel* tache::getHistory(int tacheId) {
     return model;
 }
 
-QSqlQueryModel* tache::trier(const QString& critere, bool ascendant) {
+QSqlQueryModel* tache::trier(const QString& critere, const QString& ass) {
     QSqlDatabase db = Connection::get_database();
     if (!db.isOpen()) {
         qDebug() << "Database is not open!";
@@ -281,7 +281,7 @@ QSqlQueryModel* tache::trier(const QString& critere, bool ascendant) {
 
     if (!critere.isEmpty()) {
         queryString += " ORDER BY " + critere;
-        if (!ascendant) {
+        if (ass=="desc") {
             queryString += " DESC";
         }
     }
