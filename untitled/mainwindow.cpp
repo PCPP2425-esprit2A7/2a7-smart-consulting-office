@@ -11,12 +11,25 @@
 #include <QDialog>
 #include <QTableView>
 #include <QSqlQueryModel>
+#include <QSqlQuery>
+#include <QSqlError>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    int verif_arduino = A.connect_arduino();
+    switch(verif_arduino){
+    case(0):qDebug()<<"arduino is available and connected to :" << A.getArduinoPortName();
+        break;
+    case(1):qDebug()<<"arduino is available but not connected to :" << A.getArduinoPortName();
+        break;
+    case(-1):qDebug()<<"arduino is not available" ;
+        break;
+    }
+    QObject::connect(A.getSerial(),SIGNAL(readyRead()),this,SLOT(update_label()));
+
 
     // Initialisation du modèle de tâches
     QSqlQueryModel *model = t.afficher();
@@ -36,6 +49,43 @@ MainWindow::~MainWindow()
 {
     delete calendar; // Nettoyage du calendrier
     delete ui;
+}
+void MainWindow::update_label()
+{
+    data += A.readFromArduino();
+    qDebug() << "Données reçues d'Arduino :" << data;
+    int newlineIndex = data.indexOf('\n');
+    if (newlineIndex != -1) {
+        QSqlQuery query;
+        if (query.exec("SELECT nbr_participants FROM formations WHERE id = 1")) {
+            if (query.next()) {
+                int audience = query.value(0).toInt();
+                audience=audience+1;
+                QSqlQuery updateQuery;
+                updateQuery.prepare("UPDATE formations SET nbr_participants = :audience WHERE id = 1");
+                updateQuery.bindValue(":audience", audience);
+                if(audience > 25){
+                    A.write_arduino(QString("max").toUtf8() + "\n");
+                }
+                else{
+                if (updateQuery.exec()) {
+                    // 3. Send new value to Arduino
+                    // Convert QString to QByteArray using toUtf8() or toLatin1()
+                    A.write_arduino(QString::number(audience).toUtf8() + "\n");
+                    data = "";
+                    QMessageBox::information(this, "Succès", "Audience mise à jour: " + QString::number(audience));
+
+                } else {
+                    QMessageBox::warning(this, "Erreur", "Échec de la mise à jour.");
+                }}
+            }
+        } else {
+            QMessageBox::warning(this, "Erreur", "Échec de la lecture de la base de données.");
+        }
+
+    } else {
+        ui->label->setText("Code invalide reçu d'Arduino");
+    }
 }
 
 void MainWindow::on_calendarButton_clicked()

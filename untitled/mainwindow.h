@@ -4,6 +4,7 @@
 #include "tache.h"
 #include "calendrier.h"
 #include <QMainWindow>
+#include "arduino.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,11 +28,14 @@ private slots:
     void on_pdf_clicked();
     void on_stat_clicked();
     void on_chercher_clicked();
-    void on_calendarButton_clicked(); // Déclaration ajoutée
+    void on_calendarButton_clicked();
+void update_label();    // Déclaration ajoutée
 
 private:
     Ui::MainWindow *ui;
     tache t;
+    Arduino A;
+    QString data;
     Calendrier *calendar;
 };
 
