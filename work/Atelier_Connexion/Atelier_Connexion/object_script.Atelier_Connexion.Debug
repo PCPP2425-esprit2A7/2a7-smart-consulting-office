@@ -1,0 +1,12 @@
+INPUT(
+./debug\arduino.o
+./debug\consultants.o
+./debug\login.o
+./debug\main.o
+./debug\mainwindow.o
+./debug\connection.o
+./debug\usersession.o
+./debug\qrc_resource.o
+./debug\moc_login.o
+./debug\moc_mainwindow.o
+);
