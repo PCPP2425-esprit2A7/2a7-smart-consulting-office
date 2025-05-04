@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 QT       += core gui sql charts serialport widgets network
+=======
+QT       += core gui sql charts serialport widgets network printsupport axcontainer
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,7 +20,20 @@ SOURCES += \
     githubclient.cpp \
     arduino.cpp \
     connection.cpp \
+<<<<<<< HEAD
     projet.cpp
+=======
+    projet.cpp \
+    formations.cpp \
+    formationservice.cpp \
+    evaluation.cpp \
+    usersession.cpp \
+    login.cpp \
+    consultants.cpp \
+    calendrier.cpp \
+    tache.cpp \
+    piechartwidget.cpp
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
 
 HEADERS += \
     mainwindow.h \
@@ -24,12 +41,35 @@ HEADERS += \
     githubclient.h \
     arduino.h \
     connection.h \
+<<<<<<< HEAD
     projet.h
 
 FORMS += \
     mainwindow.ui
+=======
+    projet.h \
+    formation.h \
+    formationservice.h \
+    evaluation.h \
+    usersession.h \
+    login.h \
+    consultants.h \
+    calendrier.h \
+    tache.h \
+    piechartwidget.h
+
+FORMS += \
+    mainwindow.ui \
+    login.ui
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+<<<<<<< HEAD
+=======
+
+RESOURCES += \
+    Resources.qrc
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f

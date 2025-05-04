@@ -8,8 +8,19 @@
 #include "qlabel.h"
 #include "qstandarditemmodel.h"
 #include "projet.h"
+<<<<<<< HEAD
 #include <QChartView> // Inclure pour QChartView
 #include <QSqlQuery>
+=======
+#include "tache.h"
+#include "calendrier.h"
+#include <QChartView> // Inclure pour QChartView
+#include <QSqlQuery>
+#include <QItemSelection>
+#include <QTableView>
+#include <QValueAxis>
+#include <QBarCategoryAxis>
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -63,9 +74,62 @@ private slots:
     void afficherDashboardASCII();
     void onbtnAfficherDashboard_clicked();
     void showAsciiDashboardPage();
+<<<<<<< HEAD
 
 
 
+=======
+    //FORMATION ***************************************
+    void on_ajouter_clicked();
+
+    void on_modifier_clicked();
+    void on_supprimer_clicked();
+    //void onFormationSelectionChanged(const QItemSelection &selected, const QItemSelection &);
+    void on_afficher_clicked();
+    void on_statistiques_clicked();
+    void on_pdf_clicked();
+    void on_presence_clicked();
+    void on_evaluations_clicked();
+    void on_tripardate_clicked();
+    void on_triparduree_clicked();
+    void on_ajouterEvaluationBtn_clicked();
+    //void update_labelF();    // Bouton pour ajouter une évaluation
+
+    //CONSULTANTS ***********************************************************************************************
+
+    void on_ajouterConst_clicked();
+    void on_tableView_activated(const QModelIndex &index);
+    void onmodifier_clicked();
+    void on_supprimerbtn_clicked();
+    void navigateToPage(int pageIndex);
+    void on_searchTextChanged(const QString &searchText);
+    void on_sortheureChanged(int index);
+    void setupStatisticsChart();
+    void navigateToEmployees();
+    void navigateToHome();
+    void navigateToStock();
+    void navigateBack();
+    void navigateToClients();
+    void navigateToAppointments();
+    void navigateToTreatments();
+    void navigateToResources();
+    void stop1();
+    void navigateToclient();
+    void navigateToformation();
+    void stop2();
+//TACHE ********************************************************************************************************
+
+    void on_ajoute_clicked();
+    void onmodifier_clicked2();
+    void on_sup_clicked();
+    void on_recuperer_clicked();
+    void on_viewhistory_clicked();
+    void on_tri_clicked();
+    void onpdf_clicked();
+    void on_stat_clicked();
+    void on_chercher_clicked();
+    void on_calendarButton_clicked();
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
 
 
 
@@ -88,7 +152,16 @@ private:
 
     // Nouvelle méthode pour afficher le graphique des statistiques
     QChartView* stat(); // Fonction pour générer le graphique des statistiques
+<<<<<<< HEAD
 
+=======
+    int selectedFormationId = 3;
+
+    QWidget *chartContainer = nullptr;
+    //TAHCE ***************************************
+    tache t;
+    Calendrier *calendar;
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
 
 };
 #endif // MAINWINDOW_H

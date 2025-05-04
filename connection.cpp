@@ -24,3 +24,10 @@ void Connection::closeConnection() {
         qDebug() << "Connexion fermée.";
    }
 }
+<<<<<<< HEAD
+=======
+QSqlDatabase Connection::get_database()
+{
+    return QSqlDatabase::database(); // Return the default database connection
+}
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f

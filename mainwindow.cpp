@@ -1,6 +1,18 @@
 #include "mainwindow.h"
+<<<<<<< HEAD
 #include "qsqlerror.h"
 #include "ui_mainwindow.h"
+=======
+#include "formationservice.h"
+#include "qsqlerror.h"
+#include "ui_mainwindow.h"
+#include "login.h"
+#include "ui_login.h"
+#include "usersession.h"
+#include "tache.h"
+#include "calendrier.h"
+#include "PieChartWidget.h"
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
 #include <QDebug>
 #include <QMessageBox>
 #include <QtCharts>
@@ -13,6 +25,10 @@
 #include <QFileDialog>
 #include <QSqlQuery>
 #include <QSqlRecord>
+<<<<<<< HEAD
+=======
+#include <QRegularExpression>
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -25,6 +41,19 @@ MainWindow::MainWindow(QWidget *parent)
     });
     connect(ui->PROJETSbtn, &QPushButton::clicked, this, [=](){
         ui->stackedWidget->setCurrentIndex(1);
+<<<<<<< HEAD
+=======
+        ui->stackedWidget_3->setCurrentIndex(0);
+    });
+    connect(ui->FORMATIONSbtn, &QPushButton::clicked, this, [=](){
+        ui->stackedWidget->setCurrentIndex(2);
+    });
+    connect(ui->CONSULTANTbtn, &QPushButton::clicked, this, [=](){
+        ui->stackedWidget->setCurrentIndex(3);
+    });
+    connect(ui->RESOURCESbtn, &QPushButton::clicked, this, [=](){
+        ui->stackedWidget->setCurrentIndex(4);
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
     });
 // CONNECT GESTION CLIENT *****************************
     model = new QStandardItemModel(this);
@@ -142,10 +171,85 @@ MainWindow::MainWindow(QWidget *parent)
     ui->aff->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->aff->horizontalHeader()->setStretchLastSection(true);
 
+<<<<<<< HEAD
 
 }
 
 //CONNECT GESTION PROJETS ****************************************
+=======
+    //CONNECT FORMATIONS***********************************************************************************
+    connect(ui->ajouter,           &QPushButton::clicked, this, &MainWindow::on_ajouter_clicked);
+    connect(ui->supprimer,         &QPushButton::clicked, this, &MainWindow::on_supprimer_clicked);
+    connect(ui->modifier,          &QPushButton::clicked, this, &MainWindow::on_modifier_clicked);
+    connect(ui->afficher,          &QPushButton::clicked, this, &MainWindow::on_afficher_clicked);
+    connect(ui->pdf,               &QPushButton::clicked, this, &MainWindow::on_pdf_clicked);
+    connect(ui->presence,          &QPushButton::clicked, this, &MainWindow::on_presence_clicked);
+    connect(ui->evaluations,       &QPushButton::clicked, this, &MainWindow::on_evaluations_clicked);
+    connect(ui->tripardate,        &QPushButton::clicked, this, &MainWindow::on_tripardate_clicked);
+    connect(ui->triparduree,       &QPushButton::clicked, this, &MainWindow::on_triparduree_clicked);
+    connect(ui->ajouterEvaluationBtn, &QPushButton::clicked, this, &MainWindow::on_ajouterEvaluationBtn_clicked);
+
+    on_afficher_clicked();
+
+    //CONSULTANT CONNECT *************************************************************************************
+
+
+    // Connect the tableView's clicked and doubleClicked signals to the same slot
+    connect(ui->consultant_tableview, &QTableView::clicked, this, &MainWindow::on_tableView_activated);
+    connect(ui->consultant_tableview, &QTableView::doubleClicked, this, &MainWindow::on_tableView_activated);
+
+    // Connect the modifier button's clicked signal
+    connect(ui->modifier, &QPushButton::clicked, this, &MainWindow::on_modifier_clicked);
+
+    // Connect the delete button's clicked signal
+    connect(ui->supprimerbtn, &QPushButton::clicked, this, &MainWindow::on_supprimerbtn_clicked);
+
+    // Connect the navigation button's clicked signal
+
+
+
+    //recherche
+    connect(ui->all_search_in_e_17, &QLineEdit::textChanged, this, &MainWindow::on_searchTextChanged);
+    //trier
+    ui->up_del_cin_in_e_17->addItem("trier");
+    ui->up_del_cin_in_e_17->addItem("Nombre heures croissant");
+    ui->up_del_cin_in_e_17->addItem("Nombre heures decroissant");
+    ui->up_del_cin_in_e_17->addItem("Alphabétique croissant (Prénom)");  // Index 2
+    ui->up_del_cin_in_e_17->addItem("Alphabétique decroissant (Prénom)"); // Index 3
+
+    // Connect the combo box's currentIndexChanged signal
+    connect(ui->up_del_cin_in_e_17, QOverload<int>::of(&QComboBox::currentIndexChanged),this, &MainWindow::on_sortheureChanged);
+
+
+
+
+    // In MainWindow constructor
+    /*connect(ui->stackedWidget, &QStackedWidget::currentChanged, [this](int index) {
+        if (index == 4) {  // Page 5
+            setupStatisticsChart();
+        } else if (chartContainer) {
+            chartContainer->hide();
+        }
+    });*/
+
+    //TACHE CONNECT **********************************************************************************************************************
+    /*QSqlQueryModel *model = t.afficher();
+    qDebug() << "Nombre de taches :" << model->rowCount();*/
+    ui->aff->setModel(model);
+
+    // Initialisation du calendrier
+    calendar = new Calendrier();
+    calendar->setWindowFlags(Qt::Window | Qt::WindowCloseButtonHint);
+    calendar->setWindowTitle("Task Calendar");
+
+    // Connexion explicite du bouton calendrier
+    connect(ui->calendarButton, &QPushButton::clicked, this, &MainWindow::on_calendarButton_clicked);
+
+
+}
+
+
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
 
 MainWindow::~MainWindow()
 {
@@ -924,3 +1028,1070 @@ void MainWindow::showAsciiDashboardPage()
 {
     ui->stackedWidget_3->setCurrentIndex(2); // Replace DASHBOARD_INDEX with the correct number!
 }
+<<<<<<< HEAD
+=======
+
+//FORMATIONS *******************************************************************************************************************************************
+
+
+
+
+
+void MainWindow::on_ajouter_clicked()
+{
+    int id = ui->id->text().toInt();
+    QString date = ui->date->text();
+    int duree = ui->duree->text().toInt();
+    QString participant = ui->participant->text();
+    QString intitule = ui->intitule->text();
+    QString statut = ui->statut->text();
+    int nbr_participants = ui->nbr_participants->text().toInt();  // ← nouveau champ
+
+    if (date.isEmpty() || duree <= 0 || participant.isEmpty() ||
+        intitule.isEmpty() || statut.isEmpty() || nbr_participants < 0) {
+        QMessageBox::warning(this, "Erreur", "Veuillez remplir tous les champs correctement.");
+        return;
+    }
+
+    Formation f(id, date, duree, participant, intitule, statut, nbr_participants);
+
+    if (f.ajouter()) {
+        FormationService service;
+        QString presence = "P";
+        if (service.ajouterParticipation(f.getId(), participant, presence)) {
+            QMessageBox::information(this, "Ajout", "Formation et participation ajoutées avec succès !");
+        } else {
+            QMessageBox::critical(this, "Erreur", "Échec de l'ajout de la participation.");
+        }
+        on_afficher_clicked();
+    } else {
+        QMessageBox::critical(this, "Erreur SQL", "Échec de l'ajout de la formation.");
+    }
+}
+
+void MainWindow::on_supprimer_clicked()
+{
+    QItemSelectionModel *select = ui->tableWidget->selectionModel();
+    if (!select->hasSelection()) {
+        QMessageBox::warning(this, "Suppression", "Veuillez sélectionner une ligne.");
+        return;
+    }
+
+    QModelIndex index = select->currentIndex();
+    int id = index.sibling(index.row(), 0).data().toInt();
+
+    QSqlQuery query;
+    query.prepare("DELETE FROM FORMATIONS WHERE ID = :id");
+    query.bindValue(":id", id);
+    if (!query.exec()) {
+        QMessageBox::critical(this, "Erreur", "Échec de suppression !");
+    } else {
+        QMessageBox::information(this, "Suppression", "Formation supprimée avec succès.");
+        on_afficher_clicked();
+    }
+}
+
+void MainWindow::on_modifier_clicked()
+{
+    int id = ui->id->text().toInt();
+    QString date = ui->date->text();
+    int duree = ui->duree->text().toInt();
+    QString participant = ui->participant->text();
+    QString intitule = ui->intitule->text();
+    QString statut = ui->statut->text();
+    int nbr_participants = ui->nbr_participants->text().toInt();  // ← nouveau champ
+
+    if (date.isEmpty() || duree <= 0 || participant.isEmpty() ||
+        intitule.isEmpty() || statut.isEmpty() || nbr_participants < 0) {
+        QMessageBox::warning(this, "Erreur", "Veuillez remplir tous les champs correctement.");
+        return;
+    }
+
+    Formation f(id, date, duree, participant, intitule, statut, nbr_participants);
+
+    if (f.modifier(id)) {
+        QMessageBox::information(this, "Modification", "Formation modifiée avec succès !");
+        on_afficher_clicked();
+    } else {
+        QMessageBox::warning(this, "Erreur", "Échec de la modification.");
+    }
+}
+
+void MainWindow::on_afficher_clicked()
+{
+    QSqlQueryModel *model = new QSqlQueryModel();
+    QSqlQuery query;
+    query.prepare(
+        "SELECT ID, DATES, DUREE, PARTICIPANT, INTITULE, STATUT, NBR_PARTICIPANTS "
+        "FROM FORMATIONS");
+    query.exec();
+    model->setQuery(std::move(query));
+
+    model->setHeaderData(0, Qt::Horizontal, tr("ID"));
+    model->setHeaderData(1, Qt::Horizontal, tr("DATES"));
+    model->setHeaderData(2, Qt::Horizontal, tr("DURÉE"));
+    model->setHeaderData(3, Qt::Horizontal, tr("PARTICIPANT"));
+    model->setHeaderData(4, Qt::Horizontal, tr("INTITULÉ"));
+    model->setHeaderData(5, Qt::Horizontal, tr("STATUT"));
+    model->setHeaderData(6, Qt::Horizontal, tr("Nbr Participants"));  // ← nouveau header
+
+    ui->tableWidget->setModel(model);
+}
+
+void MainWindow::on_statistiques_clicked()
+{
+    FormationService service;
+    QSqlQueryModel* model = service.afficherStatistiques();
+    if (model->rowCount() == 0) {
+        QMessageBox::warning(this, "Statistiques", "Aucune donnée trouvée.");
+        return;
+    }
+    ui->tableWidget->setModel(model);
+    QMessageBox::information(this, "Statistiques", "Les statistiques des formations ont été affichées.");
+}
+
+void MainWindow::on_pdf_clicked()
+{
+    FormationService service;
+    QList<Formation> formations = service.obtenirFormations();
+    service.exporterPDF(formations);
+}
+
+void MainWindow::on_presence_clicked()
+{
+    FormationService service;
+    QSqlQueryModel* model = service.afficherPresence();
+    ui->tableWidget->setModel(model);
+    QMessageBox::information(this, "Présence", "Les informations de présence ont été affichées.");
+}
+
+void MainWindow::on_evaluations_clicked()
+{
+    // 1) Vérification de la sélection
+    QModelIndexList rows = ui->tableWidget->selectionModel()->selectedRows();
+    if (rows.isEmpty()) {
+        QMessageBox::warning(this, "Erreur", "Veuillez sélectionner une formation.");
+        return;
+    }
+    int formationId = rows.first().data().toInt();  // Colonne 0 = ID de la formation
+
+    // 2) Préparer la requête JOIN
+    QSqlQueryModel *model = new QSqlQueryModel(this);
+    model->setQuery(QStringLiteral(R"(
+        SELECT
+            F.ID         AS FormationID,
+            F.INTITULE   AS Intitule,
+            E.ID_EVALUATION AS ID_Evaluation,
+            E.PARTICIPANT_ID,
+            E.POURCENTAGE,
+            E.COMMENTAIRE
+        FROM FORMATIONS F
+        INNER JOIN EVALUATIONS E
+          ON F.ID = E.ID_FORMATION
+        WHERE F.ID = %1
+    )").arg(formationId));
+
+    if (model->lastError().isValid()) {
+        QMessageBox::critical(this, "Erreur SQL", model->lastError().text());
+        delete model;
+        return;
+    }
+
+    // 3) Nommer les colonnes pour l'affichage
+    model->setHeaderData(0, Qt::Horizontal, "ID Formation");
+    model->setHeaderData(1, Qt::Horizontal, "Intitulé");
+    model->setHeaderData(2, Qt::Horizontal, "ID Éval.");
+    model->setHeaderData(3, Qt::Horizontal, "ID Participant");
+    model->setHeaderData(4, Qt::Horizontal, "Pourcentage");
+    model->setHeaderData(5, Qt::Horizontal, "Commentaire");
+
+    // 4) Afficher dans la vue
+    ui->tableWidget->setModel(model);
+    ui->tableWidget->resizeColumnsToContents();
+}
+
+
+
+void MainWindow::on_ajouterEvaluationBtn_clicked()
+{
+    // Step 1: Check selection
+    QItemSelectionModel *selection = ui->tableWidget->selectionModel();
+    if (!selection || !selection->hasSelection()) {
+        QMessageBox::warning(this, "Erreur", "Veuillez sélectionner une formation dans le tableau.");
+        return;
+    }
+
+    QModelIndex index = selection->currentIndex();
+    int row = index.row();
+
+    // Step 2: Get ID_FORMATION (col 0) and PARTICIPANT_ID (adjust if needed, e.g. col 3)
+    int idFormation = ui->tableWidget->model()->index(row, 0).data().toInt();
+    int participantId = ui->tableWidget->model()->index(row, 3).data().toInt(); // change if PARTICIPANT_ID is elsewhere
+
+    qDebug() << "Selected formation ID:" << idFormation;
+    qDebug() << "Selected participant ID:" << participantId;
+
+    // Step 3: Ask for ID_EVALUATION
+    bool ok;
+    int idEvaluation = QInputDialog::getInt(this, "ID Évaluation", "Entrez un ID d'évaluation :", 0, 0, 1000000, 1, &ok);
+    if (!ok) return;
+
+    // Step 4: Ask for percentage
+    double pourcentage = QInputDialog::getDouble(this, "Pourcentage", "Entrez le pourcentage :", 0, 0, 100, 2, &ok);
+    if (!ok) return;
+
+    // Step 5: Ask for comment
+    QString commentaire = QInputDialog::getText(this, "Commentaire", "Entrez un commentaire :", QLineEdit::Normal, "", &ok);
+    if (!ok || commentaire.isEmpty()) return;
+
+    // Step 6: Insert into EVALUATIONS
+    QSqlQuery query;
+    query.prepare(R"(
+        INSERT INTO EVALUATIONS (ID_EVALUATION, ID_FORMATION, PARTICIPANT_ID, POURCENTAGE, COMMENTAIRE)
+        VALUES (:idEvaluation, :formationId, :participantId, :pourcentage, :commentaire)
+    )");
+    query.bindValue(":idEvaluation", idEvaluation);
+    query.bindValue(":formationId", idFormation);
+    query.bindValue(":participantId", participantId);
+    query.bindValue(":pourcentage", pourcentage);
+    query.bindValue(":commentaire", commentaire);
+
+    if (query.exec()) {
+        QMessageBox::information(this, "Succès", "✅ Évaluation ajoutée avec succès !");
+    } else {
+        QMessageBox::critical(this, "Erreur", "❌ Échec de l'ajout : " + query.lastError().text());
+    }
+}
+
+
+
+
+void MainWindow::on_tripardate_clicked()
+{
+    FormationService service;
+    QSqlQueryModel* model = service.triParDate();
+    ui->tableWidget->setModel(model);
+    QMessageBox::information(this, "Tri par Date", "Les formations ont été triées par date.");
+}
+
+void MainWindow::on_triparduree_clicked()
+{
+    FormationService service;
+    QSqlQueryModel* model = service.triParDuree();
+    ui->tableWidget->setModel(model);
+    QMessageBox::information(this, "Tri par Durée", "Les formations ont été triées par durée.");
+}
+
+
+//MAINWINDOW CONSULTANTS*******************************************************************************************
+
+void MainWindow::setupStatisticsChart()
+{
+    // Only proceed if we're on page 5 (index 4)
+    if (ui->stackedWidget->currentIndex() != 4) {
+        if (chartContainer) {
+            chartContainer->hide();  // Hide the chart if not on page 5
+        }
+        return;
+    }
+
+    // Create a query to get consultant names and hours
+    QSqlQuery query;
+    query.prepare("SELECT PRENOM_CONS, NOM_CONS, HEURES FROM consultants ORDER BY HEURES DESC");
+
+    if (!query.exec()) {
+        qDebug() << "Query error:" << query.lastError().text();
+        return;
+    }
+
+    // Create bar sets
+    QBarSet *set = new QBarSet("Heures travaillées");
+    QStringList categories;
+
+    while (query.next()) {
+        QString firstName = query.value(0).toString();
+        QString lastName = query.value(1).toString();
+        int hours = query.value(2).toInt();
+
+        *set << hours;
+        categories << QString("%1 \n %2").arg(firstName).arg(lastName);
+    }
+
+    // Create series and add the bar set
+    QBarSeries *series = new QBarSeries();
+    series->append(set);
+    series->setLabelsVisible(true);
+    series->setLabelsFormat("@value heures");
+    series->setLabelsPosition(QAbstractBarSeries::LabelsOutsideEnd);
+
+    // Create chart and add series
+    QChart *chart = new QChart();
+    chart->addSeries(series);
+    chart->setTitle("Statistiques des heures travaillées par consultant");
+    chart->setAnimationOptions(QChart::SeriesAnimations);
+
+    // Create axes
+    QBarCategoryAxis *axisX = new QBarCategoryAxis();
+    axisX->append(categories);
+    chart->addAxis(axisX, Qt::AlignBottom);
+    series->attachAxis(axisX);
+
+    QValueAxis *axisY = new QValueAxis();
+    axisY->setTitleText("Heures");
+    chart->addAxis(axisY, Qt::AlignLeft);
+    series->attachAxis(axisY);
+
+    // Customize chart appearance
+    chart->legend()->setVisible(true);
+    chart->legend()->setAlignment(Qt::AlignBottom);
+
+    // Create chart view
+    QChartView *chartView = new QChartView(chart);
+    chartView->setRenderHint(QPainter::Antialiasing);
+
+    // Clean up previous container if it exists
+    if (chartContainer) {
+        chartContainer->deleteLater();
+    }
+
+    // Create a container widget for the chart
+    chartContainer = new QWidget(this);
+    chartContainer->setGeometry(1200, 450, 600, 350);  // x, y, width, height
+    chartContainer->setStyleSheet("background-color: white; border: 1px solid #d0d0d0;");
+
+    // Create and set the layout
+    QVBoxLayout *chartLayout = new QVBoxLayout(chartContainer);
+    chartLayout->setContentsMargins(5, 5, 5, 5);  // Small margin inside the container
+    chartLayout->addWidget(chartView);
+
+    // Show the container only if we're on page 5
+    if (ui->stackedWidget->currentIndex() == 4) {
+        chartContainer->show();
+    } else {
+        chartContainer->hide();
+    }
+}
+
+void MainWindow::on_sortheureChanged(int index)
+{
+    // Get access to the consultant table view
+    QStackedWidget* stackedWidget = ui->stackedWidget;
+    QWidget* page = stackedWidget->widget(4);
+    QStackedWidget* constStacked = page ? page->findChild<QStackedWidget*>("conststacked") : nullptr;
+    QWidget* constPage = constStacked ? constStacked->widget(0) : nullptr;
+    QTableView* consultant_tableview = constPage ? constPage->findChild<QTableView*>("consultant_tableview") : nullptr;
+
+    if (!consultant_tableview) {
+        qDebug() << "Failed to access consultant table view";
+        return;
+    }
+
+    consultants consultant;
+    QSqlQueryModel *model = new QSqlQueryModel();
+    QString queryStr = "SELECT ID_CONS, NOM_CONS, PRENOM_CONS, EMAIL, TEL, CATEGORIE, MDP, HEURES, QUESTION, REPONSE "
+                       "FROM consultants ";
+
+    // Add sorting based on the selected option
+    switch(index) {
+    case 1: // "Nombre heures croissant"
+        queryStr += "ORDER BY HEURES ASC";
+        break;
+    case 2: // "Nombre heures decroissant"
+        queryStr += "ORDER BY HEURES DESC";
+        break;
+    case 3: // "Alphabétique croissant (Prénom)"
+        queryStr += "ORDER BY PRENOM_CONS ASC";
+        break;
+    case 4: // "Alphabétique decroissant (Prénom)"
+        queryStr += "ORDER BY PRENOM_CONS DESC";
+        break;
+    default:
+        // No sorting (shouldn't happen as we have defined all options)
+        break;
+    }
+
+    QSqlQuery query;
+    if (query.exec(queryStr)) {
+        model->setQuery(std::move(query));
+        // Set headers
+        model->setHeaderData(0, Qt::Horizontal, tr("ID_CONS"));
+        model->setHeaderData(1, Qt::Horizontal, tr("NOM_CONS"));
+        model->setHeaderData(2, Qt::Horizontal, tr("PRENOM_CONS"));
+        model->setHeaderData(3, Qt::Horizontal, tr("EMAIL"));
+        model->setHeaderData(4, Qt::Horizontal, tr("TEL"));
+        model->setHeaderData(5, Qt::Horizontal, tr("CATEGORIE"));
+        model->setHeaderData(6, Qt::Horizontal, tr("MDP"));
+        model->setHeaderData(7, Qt::Horizontal, tr("HEURES"));
+        model->setHeaderData(8, Qt::Horizontal, tr("QUESTION"));
+        model->setHeaderData(9, Qt::Horizontal, tr("REPONSE"));
+
+        consultant_tableview->setModel(model);
+        consultant_tableview->resizeColumnsToContents();
+    } else {
+        qDebug() << "Sorting query error:" << query.lastError().text();
+        delete model;
+    }
+}
+
+
+
+void MainWindow::on_searchTextChanged(const QString &searchText)
+{
+    // Get access to the consultant table view (same way as in your constructor)
+    QStackedWidget* stackedWidget = ui->stackedWidget;
+    QWidget* page = stackedWidget->widget(4);
+    QStackedWidget* constStacked = page ? page->findChild<QStackedWidget*>("conststacked") : nullptr;
+    QWidget* constPage = constStacked ? constStacked->widget(0) : nullptr;
+    QTableView* consultant_tableview = constPage ? constPage->findChild<QTableView*>("consultant_tableview") : nullptr;
+
+    if (!consultant_tableview) {
+        qDebug() << "Failed to access consultant table view";
+        return;
+    }
+
+    consultants consultant;
+    QSqlQueryModel *model;
+
+    if (searchText.isEmpty()) {
+        // If search is empty, show all consultants
+        model = consultant.Afficherconsultants();
+    } else {
+        // Create a filtered model
+        model = new QSqlQueryModel();
+        QString queryStr = "SELECT ID_CONS, NOM_CONS, PRENOM_CONS, EMAIL, TEL, CATEGORIE, MDP, HEURES, QUESTION, REPONSE "
+                           "FROM consultants WHERE "
+                           "ID_CONS LIKE :search OR "
+                           "NOM_CONS LIKE :search OR "
+                           "PRENOM_CONS LIKE :search OR "
+                           "EMAIL LIKE :search OR "
+                           "TEL LIKE :search";
+
+        QSqlQuery query;
+        query.prepare(queryStr);
+        query.bindValue(":search", "%" + searchText + "%");
+
+        if (query.exec()) {
+            model->setQuery(std::move(query));
+            // Set headers (same as in Afficherconsultants())
+            model->setHeaderData(0, Qt::Horizontal, tr("ID_CONS"));
+            model->setHeaderData(1, Qt::Horizontal, tr("NOM_CONS"));
+            model->setHeaderData(2, Qt::Horizontal, tr("PRENOM_CONS"));
+            model->setHeaderData(3, Qt::Horizontal, tr("EMAIL"));
+            model->setHeaderData(4, Qt::Horizontal, tr("TEL"));
+            model->setHeaderData(5, Qt::Horizontal, tr("CATEGORIE"));
+            model->setHeaderData(6, Qt::Horizontal, tr("MDP"));
+            model->setHeaderData(7, Qt::Horizontal, tr("HEURES"));
+            model->setHeaderData(8, Qt::Horizontal, tr("QUESTION"));
+            model->setHeaderData(9, Qt::Horizontal, tr("REPONSE"));
+        } else {
+            qDebug() << "Search query error:" << query.lastError().text();
+            delete model;
+            return;
+        }
+    }
+
+    consultant_tableview->setModel(model);
+    consultant_tableview->resizeColumnsToContents();
+}
+
+
+void MainWindow::on_ajouterConst_clicked()
+{
+
+    // Retrieve input values from the UI
+    QString nom_cons = ui->nom_9->text().trimmed(); // Trim whitespace
+    QString prenom_cons = ui->prenom_9->text().trimmed();
+    QString email = ui->email_9->text().trimmed();
+    QString telStr = ui->tel_9->text().trimmed();
+    QString categorie = ui->categorie_9->currentText();
+    QString mdp = ui->mdp_9->text();
+    QString heuresStr = ui->heures_9->text().trimmed();
+    QString question = ui->question_9->currentText();
+    QString reponse = ui->rep_9->text().trimmed();
+
+    // Convert numeric fields
+    bool telOk, heuresOk;
+    int tel = telStr.toInt(&telOk);      // Convert to int (for NUMBER type in DB)
+    int heures = heuresStr.toInt(&heuresOk); // Convert to int
+
+    // Regular expressions for validation
+    static const QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for names
+    static const QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
+    static const QRegularExpression numberRx("^\\d+$"); // Only digits for phone number
+
+    // Input validation
+    if (!nameRx.match(nom_cons).hasMatch() || !nameRx.match(prenom_cons).hasMatch()) {
+        QMessageBox::critical(this, tr("Erreur"), tr("Le nom et le prénom doivent contenir uniquement des lettres."), QMessageBox::Cancel);
+        return;
+    }
+    if (!emailRx.match(email).hasMatch()) {
+        QMessageBox::critical(this, tr("Erreur"), tr("Veuillez entrer une adresse email valide."), QMessageBox::Cancel);
+        return;
+    }
+    if (!telOk) {
+        QMessageBox::critical(this, tr("Erreur"), tr("Le numéro de téléphone doit être un nombre valide."), QMessageBox::Cancel);
+        return;
+    }
+
+
+    // Create consultants object
+    consultants consultant(0, nom_cons, prenom_cons, email, tel, categorie, mdp, heures, question, reponse);
+
+    // Attempt to add consultant
+    if (consultant.Ajouterconsultants()) {
+        // Update the table view if addition was successful
+        QStackedWidget* stackedWidget = ui->stackedWidget;
+        QWidget* page = stackedWidget->widget(4);
+        QStackedWidget* constStacked = page->findChild<QStackedWidget*>("conststacked");
+        QWidget* constPage = constStacked->widget(0);
+        QTableView* consultant_tableview = constPage->findChild<QTableView*>("consultant_tableview");
+
+        if (consultant_tableview) {
+            consultant_tableview->setModel(consultant.Afficherconsultants());
+        }
+
+        QMessageBox::information(this, tr("Succès"), tr("Ajout effectué."), QMessageBox::Cancel);
+
+        // Clear input fields after addition
+        ui->nom_9->clear();
+        ui->prenom_9->clear();
+        ui->email_9->clear();
+        ui->tel_9->clear();
+        ui->categorie_9->setCurrentIndex(-1); // Reset QComboBox selection
+        ui->mdp_9->clear();
+        ui->heures_9->clear();
+        ui->question_9->setCurrentIndex(-1); // Reset QComboBox selection
+        ui->rep_9->clear();
+    } else {
+        QMessageBox::critical(this, tr("Erreur"), tr("Erreur lors de l'ajout du consultant."), QMessageBox::Cancel);
+    }
+}
+
+
+void MainWindow::on_tableView_activated(const QModelIndex &index)
+{
+    if (!index.isValid()) {
+        qDebug() << "Invalid index";
+        return;
+    }
+
+    // Get the ID_CONS value from the selected row
+    QString id_cons = ui->consultant_tableview->model()->data(ui->consultant_tableview->model()->index(index.row(), 0)).toString();
+
+    // Display the selected ID in the QLineEdit
+    ui->id_selected->setText(id_cons);
+
+    // Check if it's a double-click event*********************************************************************************************************************
+    if (QApplication::mouseButtons() == Qt::LeftButton && QApplication::keyboardModifiers() == Qt::NoModifier) {
+        // Fetch the consultant's details from the database
+        Connection c;
+        c.closeConnection();
+        QSqlQuery qry;
+
+        qry.prepare("SELECT NOM_CONS, PRENOM_CONS, EMAIL, TEL, CATEGORIE, MDP, HEURES, QUESTION, REPONSE FROM consultants WHERE ID_CONS = :ID_CONS");
+        qry.bindValue(":ID_CONS", id_cons);
+
+        if (qry.exec() && qry.next()) {
+            // Populate the input fields with the fetched data
+            ui->nom_9->setText(qry.value(0).toString()); // NOM_CONS
+            ui->prenom_9->setText(qry.value(1).toString()); // PRENOM_CONS
+            ui->email_9->setText(qry.value(2).toString()); // EMAIL
+            ui->tel_9->setText(qry.value(3).toString()); // TEL
+            ui->categorie_9->setCurrentText(qry.value(4).toString()); // CATEGORIE
+            ui->mdp_9->setText(qry.value(5).toString()); // MDP
+            ui->heures_9->setText(qry.value(6).toString()); // HEURES
+            ui->question_9->setCurrentText(qry.value(7).toString()); // QUESTION
+            ui->rep_9->setText(qry.value(8).toString()); // REPONSE
+
+            // Access the nested stacked widget (consultant_tableview) within stackedWidget (page 5)
+            QStackedWidget* stackedWidget = ui->stackedWidget;
+            QWidget* page = stackedWidget->widget(4); // Access page 5 (index 4)
+            QStackedWidget* constStacked = page->findChild<QStackedWidget*>("conststacked");
+
+            if (constStacked) {
+                // Navigate to page 2 of the nested stacked widget
+                constStacked->setCurrentIndex(1); // Assuming index 1 is page 2
+            } else {
+                qDebug() << "Failed to find the nested stacked widget 'conststacked'.";
+            }
+        } else {
+            qDebug() << "Error fetching consultant details:" << qry.lastError().text();
+        }
+
+        // Close the database connection
+        c.closeConnection();
+    }
+}
+void MainWindow::onmodifier_clicked()
+{
+    // Get the selected row's ID_CONS
+    QModelIndexList selectedIndexes = ui->consultant_tableview->selectionModel()->selectedIndexes();
+
+    if (selectedIndexes.size() == 0) {
+        return; // No selection, do nothing
+    } else if (selectedIndexes.size() > 1) {
+        QMessageBox::warning(this, tr("Sélection multiple"), tr("Veuillez sélectionner une seule ligne à modifier."), QMessageBox::Ok);
+        return;
+    }
+
+    int id_cons = selectedIndexes.at(0).sibling(selectedIndexes.at(0).row(), 0).data().toInt();
+
+    // Retrieve input values from the UI
+    QString nom_cons = ui->nom_9->text();
+    QString prenom_cons = ui->prenom_9->text();
+    QString email = ui->email_9->text();
+    QString telStr = ui->tel_9->text();
+    QString categorie = ui->categorie_9->currentText();
+    QString mdp = ui->mdp_9->text();
+    QString heuresStr = ui->heures_9->text();
+    QString question = ui->question_9->currentText();
+    QString reponse = ui->rep_9->text();
+
+    // Convert numeric fields
+    bool telOk, heuresOk;
+    int tel = telStr.toInt(&telOk);
+    int heures = heuresStr.toInt(&heuresOk);
+
+    // Input validation
+    static const QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for name fields
+    static const QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
+    static const QRegularExpression numberRx("^\\d+$"); // Only digits for numeric fields
+
+    if (!nameRx.match(nom_cons).hasMatch() || !nameRx.match(prenom_cons).hasMatch()) {
+        QMessageBox::critical(this, tr("Erreur"), tr("Le nom et le prénom doivent contenir uniquement des lettres."), QMessageBox::Cancel);
+    } else if (!emailRx.match(email).hasMatch()) {
+        QMessageBox::critical(this, tr("Erreur"), tr("Veuillez entrer une adresse email valide."), QMessageBox::Cancel);
+    } else if (!numberRx.match(telStr).hasMatch()) {
+        QMessageBox::critical(this, tr("Erreur"), tr("Le numéro de téléphone doit contenir uniquement des chiffres."), QMessageBox::Cancel);
+    } else {
+        // Create consultants object
+        consultants consultant(id_cons, nom_cons, prenom_cons, email, tel, categorie, mdp, heures, question, reponse);
+
+        // Attempt to update consultant
+        if (consultant.Modifierconsultants()) {
+            // Update the table view if modification was successful
+            ui->consultant_tableview->setModel(consultant.Afficherconsultants());
+            QMessageBox::information(this, tr("Succès"), tr("Modification effectuée."), QMessageBox::Cancel);
+
+            // Clear input fields after modification
+            ui->nom_9->clear();
+            ui->prenom_9->clear();
+            ui->email_9->clear();
+            ui->tel_9->clear();
+            ui->categorie_9->setCurrentIndex(-1); // Reset QComboBox selection
+            ui->mdp_9->clear();
+            ui->heures_9->clear();
+            ui->question_9->setCurrentIndex(-1); // Reset QComboBox selection
+            ui->rep_9->clear();
+
+            // Navigate back to page 1 of the nested stacked widget (consultant_tableview)
+            QStackedWidget* stackedWidget = ui->stackedWidget;
+            QWidget* page = stackedWidget->widget(4); // Access page 5 (index 4) of the outer stacked widget
+            QStackedWidget* constStacked = page->findChild<QStackedWidget*>("conststacked");
+
+            if (constStacked) {
+                constStacked->setCurrentIndex(0); // Navigate to page 1 (index 0) of the nested stacked widget
+            } else {
+                qDebug() << "Failed to find the nested stacked widget 'conststacked'.";
+            }
+        } else {
+            QMessageBox::critical(this, tr("Erreur"), tr("Erreur lors de la modification du consultant."), QMessageBox::Cancel);
+        }
+    }
+}
+void MainWindow::on_supprimerbtn_clicked()
+{
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Confirmation", "Voulez-vous supprimer ce consultant ?", QMessageBox::Yes | QMessageBox::No);
+
+    if (reply == QMessageBox::Yes) {
+        // Get the selected row's ID_CONS
+        QModelIndexList selectedIndexes = ui->consultant_tableview->selectionModel()->selectedIndexes();
+
+        if (selectedIndexes.size() == 0) {
+            QMessageBox::warning(this, tr("Aucune sélection"), tr("Veuillez sélectionner une ligne à supprimer."), QMessageBox::Ok);
+            return;
+        }
+
+        int id_cons = selectedIndexes.at(0).sibling(selectedIndexes.at(0).row(), 0).data().toInt();
+
+        // Create consultants object
+        consultants consultant;
+        consultant.setID_CONS(id_cons);
+
+        // Attempt to delete consultant
+        if (consultant.Supprimerconsultants(QString::number(id_cons))) {
+            // Update the table view if deletion was successful
+            ui->consultant_tableview->setModel(consultant.Afficherconsultants());
+            QMessageBox::information(this, tr("Succès"), tr("Suppression effectuée."), QMessageBox::Cancel);
+
+            // Clear input fields after deletion
+            ui->nom_9->clear();
+            ui->prenom_9->clear();
+            ui->email_9->clear();
+            ui->tel_9->clear();
+            ui->categorie_9->setCurrentIndex(-1); // Reset QComboBox selection
+            ui->mdp_9->clear();
+            ui->heures_9->clear();
+            ui->question_9->setCurrentIndex(-1); // Reset QComboBox selection
+            ui->rep_9->clear();
+        } else {
+            QMessageBox::critical(this, tr("Erreur"), tr("Erreur lors de la suppression du consultant."), QMessageBox::Cancel);
+        }
+    }
+}
+
+void MainWindow::navigateToPage(int pageIndex)
+{
+    ui->stackedWidget->setCurrentIndex(pageIndex);
+}
+
+
+//Consultants
+
+void MainWindow::navigateToEmployees()
+{
+    // Only allow navigation if user is a Consultant
+    if (UserSession::instance().getCategory() == "Consultants") {
+        ui->stackedWidget->setCurrentIndex(4); // Page 5 (index 4)
+    }
+}
+
+void MainWindow::navigateToHome()
+{
+    // Only allow navigation if user is a Consultant
+    if (UserSession::instance().getCategory() == "Consultants") {
+        ui->stackedWidget->setCurrentIndex(2); // Page 3 (index 2)
+    }
+}
+
+void MainWindow::navigateToStock()
+{
+    // Only allow navigation if user is a Consultant
+    if (UserSession::instance().getCategory() == "Consultants") {
+        ui->stackedWidget->setCurrentIndex(7); // Page 8 (index 7)
+    }
+}
+
+
+
+void MainWindow::navigateBack()
+{
+    ui->stackedWidget->setCurrentIndex(0);  // Navigate to page 1 (index 0)
+}
+
+void MainWindow::navigateToClients()
+{
+    if (UserSession::instance().getCategory() == "Consultants") {
+        QMessageBox::warning(this, tr("Accès refusé"),
+                             tr("Désolé, vous n'avez pas les autorisations nécessaires pour accéder à cette page.\n"
+                                "Seuls les clients de categorie direction et management peuvent accéder à cette section."));    }
+}
+
+void MainWindow::navigateToAppointments()
+{
+    if (UserSession::instance().getCategory() == "Consultants") {
+        QMessageBox::warning(this, tr("Accès refusé"),
+                             tr("Désolé, vous n'avez pas les autorisations nécessaires pour accéder à cette page.\n"
+                                "Seuls les clients de categorie direction et management peuvent accéder à cette section."));    }
+}
+
+void MainWindow::navigateToTreatments()
+{
+    if (UserSession::instance().getCategory() == "Consultants") {
+        QMessageBox::warning(this, tr("Accès refusé"),
+                             tr("Désolé, vous n'avez pas les autorisations nécessaires pour accéder à cette page.\n"
+                                "Seuls les personnels du support peuvent accéder à cette section."));    }
+}
+
+
+
+//Personnel du support
+
+void MainWindow::navigateToResources()
+{
+    // Only allow navigation if user is a Consultant
+    if (UserSession::instance().getCategory() == "Personnel du support") {
+        ui->stackedWidget->setCurrentIndex(6);
+    }
+}
+
+void MainWindow::stop1()
+{
+    if (UserSession::instance().getCategory() == "Personnel du support") {
+        QMessageBox::warning(this, tr("Accès refusé"),
+                             tr("Désolé, vous n'avez pas les autorisations nécessaires pour accéder à cette page.\n"
+                                ));    }
+}
+
+
+
+//Direction et management
+void MainWindow::navigateToclient()
+{
+    // Only allow navigation if user is a Consultant
+    if (UserSession::instance().getCategory() == "Direction et management") {
+        ui->stackedWidget->setCurrentIndex(3);
+    }
+}
+void MainWindow::navigateToformation()
+{
+    // Only allow navigation if user is a Consultant
+    if (UserSession::instance().getCategory() == "Direction et management") {
+        ui->stackedWidget->setCurrentIndex(5);
+    }
+}
+
+void MainWindow::stop2()
+{
+    if (UserSession::instance().getCategory() == "Direction et management") {
+        QMessageBox::warning(this, tr("Accès refusé"),
+                             tr("Désolé, vous n'avez pas les autorisations nécessaires pour accéder à cette page.\n"
+                                ));    }
+}
+
+//TACHE MAINWINDOW *************************************************************************************************
+void MainWindow::on_calendarButton_clicked()
+{
+
+    calendar->show();
+    calendar->raise();  // Bring to front
+    calendar->activateWindow();  // Give focus
+    calendar->loadTasks();
+
+}
+void MainWindow::on_ajoute_clicked()
+{
+    QString nom = ui->nom->text().trimmed();
+    QString description = ui->description->text().trimmed();
+    QDate datee = ui->datee->date();
+    QString priorite = ui->priorite->text().trimmed();
+    QString statut = ui->statut->text().trimmed();
+
+    if (nom.isEmpty() || description.isEmpty()) {
+        QMessageBox::warning(this, "Erreur", "Veuillez remplir tous les champs obligatoires.");
+        return;
+    }
+
+    tache newTache(nom, description, datee, priorite, statut);
+
+    if (newTache.create()) {
+        QMessageBox::information(this, "Succès", "La tâche a été ajoutée avec succès !");
+        ui->aff->setModel(newTache.afficher());
+        // Réinitialiser les champs après ajout
+        ui->nom->clear();
+        ui->description->clear();
+        ui->priorite->clear();
+        ui->statut->clear();
+    } else {
+        QMessageBox::critical(this, "Erreur", "Échec de l'ajout de la tâche.");
+    }
+}
+
+void MainWindow::on_recuperer_clicked()
+{
+    QString idText = ui->idedit->text();
+    bool ok;
+    int id = idText.toInt(&ok);
+
+    if (!ok || id <= 0) {
+        QMessageBox::warning(this, "Erreur", "Veuillez entrer un ID valide (nombre positif).");
+        return;
+    }
+
+    if (!tache::exists(id)) {
+        QMessageBox::warning(this, "Erreur", "Aucune tâche trouvée avec cet ID.");
+        return;
+    }
+
+    tache t = tache::read(id);
+    ui->nom->setText(t.getNom());
+    ui->description->setText(t.getDescription());
+    ui->datee->setDate(t.getDatee());
+    ui->priorite->setText(t.getPriorite());
+    ui->statut->setText(t.getStatut());
+}
+
+void MainWindow::onmodifier_clicked2()
+{
+    QString idText = ui->idedit->text();
+    bool ok;
+    int id = idText.toInt(&ok);
+
+    if (!ok || id <= 0) {
+        QMessageBox::warning(this, "Erreur", "ID invalide.");
+        return;
+    }
+
+    if (!tache::exists(id)) {
+        QMessageBox::warning(this, "Erreur", "Tâche introuvable.");
+        return;
+    }
+
+    QString nom = ui->nom->text().trimmed();
+    QString description = ui->description->text().trimmed();
+    QDate datee = ui->datee->date();
+    QString priorite = ui->priorite->text().trimmed();
+    QString statut = ui->statut->text().trimmed();
+
+    if (t.update(id, nom, description, datee, priorite, statut)) {
+        QMessageBox::information(this, "Succès", "Tâche mise à jour.");
+        ui->aff->setModel(t.afficher());
+    } else {
+        QMessageBox::warning(this, "Erreur", "Échec de la mise à jour.");
+    }
+}
+
+void MainWindow::on_sup_clicked()
+{
+    QString idText = ui->idedit->text();
+    bool ok;
+    int id = idText.toInt(&ok);
+
+    if (!ok || id <= 0) {
+        QMessageBox::warning(this, "Erreur", "ID invalide.");
+        return;
+    }
+
+    if (QMessageBox::question(this, "Confirmation",
+                              "Voulez-vous vraiment supprimer cette tâche?",
+                              QMessageBox::Yes|QMessageBox::No) == QMessageBox::No) {
+        return;
+    }
+
+    if (t.remove(id)) {
+        QMessageBox::information(this, "Succès", "Tâche supprimée.");
+        ui->aff->setModel(t.afficher());
+    } else {
+        QMessageBox::warning(this, "Erreur", "Échec de la suppression.");
+    }
+}
+
+void MainWindow::on_viewhistory_clicked()
+{
+    QString idText = ui->idedit->text();
+    bool ok;
+    int id = idText.toInt(&ok);
+
+    if (!ok || id <= 0) {
+        QScopedPointer<QSqlQueryModel> historyModel(tache::gettHistory());
+        if (historyModel && historyModel->rowCount() > 0) {
+            QDialog historyDialog(this);
+            historyDialog.setWindowTitle("Historique des modifications");
+            historyDialog.resize(800, 400);
+
+            QTableView* historyView = new QTableView(&historyDialog);
+            historyView->setModel(historyModel.data());
+            historyView->resizeColumnsToContents();
+
+            QVBoxLayout layout(&historyDialog);
+            layout.addWidget(historyView);
+
+            historyDialog.exec();
+        }
+        return ;
+    }
+
+    QScopedPointer<QSqlQueryModel> historyModel(tache::getHistory(id));
+    if (historyModel && historyModel->rowCount() > 0) {
+        QDialog historyDialog(this);
+        historyDialog.setWindowTitle("Historique des modifications");
+        historyDialog.resize(800, 400);
+
+        QTableView* historyView = new QTableView(&historyDialog);
+        historyView->setModel(historyModel.data());
+        historyView->resizeColumnsToContents();
+
+        QVBoxLayout layout(&historyDialog);
+        layout.addWidget(historyView);
+
+        historyDialog.exec();
+    } else {
+        QMessageBox::information(this, "Information", "Aucun historique disponible.");
+    }
+}
+
+void MainWindow::on_tri_clicked()
+{
+    tache t;
+    QString critere = ui->Trie->currentText().toLower();
+
+    QString ass = ui->ass->currentText().toLower();
+
+
+
+    QSqlQueryModel* model = t.trier(critere,ass);
+    if (model) {
+        ui->aff->setModel(model);
+        ui->aff->resizeColumnsToContents();
+    } else {
+        QMessageBox::warning(this, "Erreur", "Échec du tri.");
+    }
+}
+
+void MainWindow::onpdf_clicked()
+{
+    QString defaultName = QString("taches_%1.pdf").arg(QDate::currentDate().toString("yyyyMMdd"));
+    QString fichierPDF = QFileDialog::getSaveFileName(
+        this,
+        "Enregistrer le PDF",
+        defaultName,
+        "Fichiers PDF (*.pdf)");
+
+    if (fichierPDF.isEmpty()) {
+        return;
+    }
+
+    if (!fichierPDF.endsWith(".pdf", Qt::CaseInsensitive)) {
+        fichierPDF += ".pdf";
+    }
+
+    tache t;
+    if (t.genererPDF(fichierPDF)) {
+        QMessageBox::information(this, "Succès", "PDF généré avec succès.");
+    } else {
+        QMessageBox::warning(this, "Erreur", "Échec de la génération du PDF.");
+    }
+}
+
+void MainWindow::on_stat_clicked()
+{
+    tache t;
+    QMap<QString, int> stats = t.obtenirStatistiques();
+
+    if (stats.isEmpty()) {
+        QMessageBox::warning(this, "Erreur", "Aucune donnée statistique disponible.");
+        return;
+    }
+
+    QDialog statDialog(this);
+    statDialog.setWindowTitle("Statistiques des tâches");
+    statDialog.resize(600, 600);
+
+    PieChartWidget* chartWidget = new PieChartWidget(stats, &statDialog);
+
+    QVBoxLayout layout(&statDialog);
+    layout.addWidget(chartWidget);
+
+    statDialog.exec();
+}
+
+void MainWindow::on_chercher_clicked()
+{
+    QString valeur = ui->cherche->text().trimmed();
+
+    if (valeur.isEmpty()) {
+        ui->aff->setModel(t.afficher());
+        return;
+    }
+
+    tache t;
+    QSqlQueryModel* model = t.rechercher(valeur);
+    if (model) {
+        ui->aff->setModel(model);
+        ui->aff->resizeColumnsToContents();
+    } else {
+        QMessageBox::warning(this, "Erreur", "Échec de la recherche.");
+    }
+}
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f

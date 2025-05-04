@@ -14,6 +14,10 @@ public:
     Connection();
     bool createconnect();
     void closeConnection();
+<<<<<<< HEAD
+=======
+    static QSqlDatabase get_database();
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
 };
 
 #endif // CONNECTION_H
