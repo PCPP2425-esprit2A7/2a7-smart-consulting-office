@@ -1,14 +1,43 @@
 #include "mainwindow.h"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#include "qsqlerror.h"
+#include "ui_mainwindow.h"
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 #include "formationservice.h"
 #include "qsqlerror.h"
 #include "ui_mainwindow.h"
 #include "login.h"
 #include "ui_login.h"
 #include "usersession.h"
+<<<<<<< HEAD
 #include "tache.h"
 #include "calendrier.h"
 #include "PieChartWidget.h"
 #include "PieChartWidget2.h"
+=======
+<<<<<<< HEAD
+#include "tache.h"
+#include "calendrier.h"
+#include "PieChartWidget.h"
+=======
+<<<<<<< HEAD
+=======
+#include "tache.h"
+#include "calendrier.h"
+#include "PieChartWidget.h"
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 #include <QDebug>
 #include <QMessageBox>
 #include <QtCharts>
@@ -21,7 +50,22 @@
 #include <QFileDialog>
 #include <QSqlQuery>
 #include <QSqlRecord>
+<<<<<<< HEAD
 #include <QRegularExpression>
+=======
+<<<<<<< HEAD
+#include <QRegularExpression>
+=======
+<<<<<<< HEAD
+#include <QRegularExpression>
+=======
+<<<<<<< HEAD
+=======
+#include <QRegularExpression>
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -34,6 +78,17 @@ MainWindow::MainWindow(QWidget *parent)
     });
     connect(ui->PROJETSbtn, &QPushButton::clicked, this, [=](){
         ui->stackedWidget->setCurrentIndex(1);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         ui->stackedWidget_3->setCurrentIndex(0);
     });
     connect(ui->FORMATIONSbtn, &QPushButton::clicked, this, [=](){
@@ -42,12 +97,28 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->CONSULTANTbtn, &QPushButton::clicked, this, [=](){
         ui->stackedWidget->setCurrentIndex(3);
     });
+<<<<<<< HEAD
     connect(ui->TACHESbtn, &QPushButton::clicked, this, [=](){
         ui->stackedWidget->setCurrentIndex(4);
     });
     connect(ui->RESOURCESbtn, &QPushButton::clicked, this, [=](){
         ui->stackedWidget->setCurrentIndex(4);
     });
+=======
+<<<<<<< HEAD
+    connect(ui->RESOURCESbtn, &QPushButton::clicked, this, [=](){
+        ui->stackedWidget->setCurrentIndex(4);
+    });
+=======
+<<<<<<< HEAD
+=======
+    connect(ui->RESOURCESbtn, &QPushButton::clicked, this, [=](){
+        ui->stackedWidget->setCurrentIndex(4);
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+    });
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 // CONNECT GESTION CLIENT *****************************
     model = new QStandardItemModel(this);
     model->setHorizontalHeaderLabels(QStringList()
@@ -164,6 +235,21 @@ MainWindow::MainWindow(QWidget *parent)
     ui->aff->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->aff->horizontalHeader()->setStretchLastSection(true);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+}
+
+//CONNECT GESTION PROJETS ****************************************
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     //CONNECT FORMATIONS***********************************************************************************
     connect(ui->ajouter,           &QPushButton::clicked, this, &MainWindow::on_ajouter_clicked);
     connect(ui->supprimer,         &QPushButton::clicked, this, &MainWindow::on_supprimer_clicked);
@@ -181,6 +267,14 @@ MainWindow::MainWindow(QWidget *parent)
     //CONSULTANT CONNECT *************************************************************************************
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     // Connect the tableView's clicked and doubleClicked signals to the same slot
     connect(ui->consultant_tableview, &QTableView::clicked, this, &MainWindow::on_tableView_activated);
     connect(ui->consultant_tableview, &QTableView::doubleClicked, this, &MainWindow::on_tableView_activated);
@@ -231,14 +325,32 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Connexion explicite du bouton calendrier
     connect(ui->calendarButton, &QPushButton::clicked, this, &MainWindow::on_calendarButton_clicked);
+<<<<<<< HEAD
 // RESOURCES CONNECT ***********************************************************************************************************************
     networkManager = new QNetworkAccessManager(this);
     connect(networkManager, &QNetworkAccessManager::finished, this, &MainWindow::onSmsSent);
     connect(ui->aff, &QTableView::clicked, this, &MainWindow::onTableClicked);
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
 MainWindow::~MainWindow()
 {
@@ -1017,6 +1129,17 @@ void MainWindow::showAsciiDashboardPage()
 {
     ui->stackedWidget_3->setCurrentIndex(2); // Replace DASHBOARD_INDEX with the correct number!
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
 //FORMATIONS *******************************************************************************************************************************************
 
@@ -1399,7 +1522,19 @@ void MainWindow::on_sortheureChanged(int index)
 
     QSqlQuery query;
     if (query.exec(queryStr)) {
+<<<<<<< HEAD
         model->setQuery(std::move(query));
+=======
+<<<<<<< HEAD
+        model->setQuery(std::move(query));
+=======
+<<<<<<< HEAD
+        model->setQuery(query);
+=======
+        model->setQuery(std::move(query));
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         // Set headers
         model->setHeaderData(0, Qt::Horizontal, tr("ID_CONS"));
         model->setHeaderData(1, Qt::Horizontal, tr("NOM_CONS"));
@@ -1458,7 +1593,19 @@ void MainWindow::on_searchTextChanged(const QString &searchText)
         query.bindValue(":search", "%" + searchText + "%");
 
         if (query.exec()) {
+<<<<<<< HEAD
             model->setQuery(std::move(query));
+=======
+<<<<<<< HEAD
+            model->setQuery(std::move(query));
+=======
+<<<<<<< HEAD
+            model->setQuery(query);
+=======
+            model->setQuery(std::move(query));
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
             // Set headers (same as in Afficherconsultants())
             model->setHeaderData(0, Qt::Horizontal, tr("ID_CONS"));
             model->setHeaderData(1, Qt::Horizontal, tr("NOM_CONS"));
@@ -1502,9 +1649,27 @@ void MainWindow::on_ajouterConst_clicked()
     int heures = heuresStr.toInt(&heuresOk); // Convert to int
 
     // Regular expressions for validation
+<<<<<<< HEAD
     static const QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for names
     static const QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
     static const QRegularExpression numberRx("^\\d+$"); // Only digits for phone number
+=======
+<<<<<<< HEAD
+    static const QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for names
+    static const QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
+    static const QRegularExpression numberRx("^\\d+$"); // Only digits for phone number
+=======
+<<<<<<< HEAD
+    QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for names
+    QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
+    QRegularExpression numberRx("^\\d+$"); // Only digits for phone number
+=======
+    static const QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for names
+    static const QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
+    static const QRegularExpression numberRx("^\\d+$"); // Only digits for phone number
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
     // Input validation
     if (!nameRx.match(nom_cons).hasMatch() || !nameRx.match(prenom_cons).hasMatch()) {
@@ -1640,9 +1805,27 @@ void MainWindow::onmodifier_clicked()
     int heures = heuresStr.toInt(&heuresOk);
 
     // Input validation
+<<<<<<< HEAD
     static const QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for name fields
     static const QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
     static const QRegularExpression numberRx("^\\d+$"); // Only digits for numeric fields
+=======
+<<<<<<< HEAD
+    static const QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for name fields
+    static const QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
+    static const QRegularExpression numberRx("^\\d+$"); // Only digits for numeric fields
+=======
+<<<<<<< HEAD
+    QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for name fields
+    QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
+    QRegularExpression numberRx("^\\d+$"); // Only digits for numeric fields
+=======
+    static const QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for name fields
+    static const QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
+    static const QRegularExpression numberRx("^\\d+$"); // Only digits for numeric fields
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
     if (!nameRx.match(nom_cons).hasMatch() || !nameRx.match(prenom_cons).hasMatch()) {
         QMessageBox::critical(this, tr("Erreur"), tr("Le nom et le prénom doivent contenir uniquement des lettres."), QMessageBox::Cancel);
@@ -1836,6 +2019,14 @@ void MainWindow::stop2()
                              tr("Désolé, vous n'avez pas les autorisations nécessaires pour accéder à cette page.\n"
                                 ));    }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
 //TACHE MAINWINDOW *************************************************************************************************
 void MainWindow::on_calendarButton_clicked()
@@ -1847,6 +2038,18 @@ void MainWindow::on_calendarButton_clicked()
     calendar->loadTasks();
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+void MainWindow::on_ajoute_2_clicked()
+{
+    QString nom = ui->nom_2->text().trimmed();
+    QString description = ui->description_2->text().trimmed();
+    QDate datee = ui->datee->date();
+    QString priorite = ui->priorite->text().trimmed();
+    QString statut = ui->statut_4->text().trimmed();
+=======
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 void MainWindow::on_ajoute_clicked()
 {
     QString nom = ui->nom->text().trimmed();
@@ -1854,6 +2057,10 @@ void MainWindow::on_ajoute_clicked()
     QDate datee = ui->datee->date();
     QString priorite = ui->priorite->text().trimmed();
     QString statut = ui->statut->text().trimmed();
+<<<<<<< HEAD
+=======
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
     if (nom.isEmpty() || description.isEmpty()) {
         QMessageBox::warning(this, "Erreur", "Veuillez remplir tous les champs obligatoires.");
@@ -1864,12 +2071,27 @@ void MainWindow::on_ajoute_clicked()
 
     if (newTache.create()) {
         QMessageBox::information(this, "Succès", "La tâche a été ajoutée avec succès !");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        ui->aff_3->setModel(newTache.afficher());
+        // Réinitialiser les champs après ajout
+        ui->nom_2->clear();
+        ui->description_2->clear();
+        ui->priorite->clear();
+        ui->statut_4->clear();
+=======
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         ui->aff->setModel(newTache.afficher());
         // Réinitialiser les champs après ajout
         ui->nom->clear();
         ui->description->clear();
         ui->priorite->clear();
         ui->statut->clear();
+<<<<<<< HEAD
+=======
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     } else {
         QMessageBox::critical(this, "Erreur", "Échec de l'ajout de la tâche.");
     }
@@ -1892,6 +2114,19 @@ void MainWindow::on_recuperer_clicked()
     }
 
     tache t = tache::read(id);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    ui->nom_2->setText(t.getNom());
+    ui->description_2->setText(t.getDescription());
+    ui->datee->setDate(t.getDatee());
+    ui->priorite->setText(t.getPriorite());
+    ui->statut_4->setText(t.getStatut());
+}
+
+void MainWindow::on_modifier_3_clicked2()
+=======
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     ui->nom->setText(t.getNom());
     ui->description->setText(t.getDescription());
     ui->datee->setDate(t.getDatee());
@@ -1900,6 +2135,10 @@ void MainWindow::on_recuperer_clicked()
 }
 
 void MainWindow::onmodifier_clicked2()
+<<<<<<< HEAD
+=======
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 {
     QString idText = ui->idedit->text();
     bool ok;
@@ -1915,11 +2154,25 @@ void MainWindow::onmodifier_clicked2()
         return;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    QString nom = ui->nom_2->text().trimmed();
+    QString description = ui->description_2->text().trimmed();
+    QDate datee = ui->datee->date();
+    QString priorite = ui->priorite->text().trimmed();
+    QString statut = ui->statut_4->text().trimmed();
+=======
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     QString nom = ui->nom->text().trimmed();
     QString description = ui->description->text().trimmed();
     QDate datee = ui->datee->date();
     QString priorite = ui->priorite->text().trimmed();
     QString statut = ui->statut->text().trimmed();
+<<<<<<< HEAD
+=======
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
     if (t.update(id, nom, description, datee, priorite, statut)) {
         QMessageBox::information(this, "Succès", "Tâche mise à jour.");
@@ -1929,7 +2182,15 @@ void MainWindow::onmodifier_clicked2()
     }
 }
 
+<<<<<<< HEAD
 void MainWindow::on_sup_clicked()
+=======
+<<<<<<< HEAD
+void MainWindow::on_sup_2_clicked()
+=======
+void MainWindow::on_sup_clicked()
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 {
     QString idText = ui->idedit->text();
     bool ok;
@@ -1998,7 +2259,15 @@ void MainWindow::on_viewhistory_clicked()
     }
 }
 
+<<<<<<< HEAD
 void MainWindow::on_tri_clicked()
+=======
+<<<<<<< HEAD
+void MainWindow::on_tri_2_clicked()
+=======
+void MainWindow::on_tri_clicked()
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 {
     tache t;
     QString critere = ui->Trie->currentText().toLower();
@@ -2009,14 +2278,32 @@ void MainWindow::on_tri_clicked()
 
     QSqlQueryModel* model = t.trier(critere,ass);
     if (model) {
+<<<<<<< HEAD
         ui->aff->setModel(model);
         ui->aff->resizeColumnsToContents();
+=======
+<<<<<<< HEAD
+        ui->aff_3->setModel(model);
+        ui->aff_3->resizeColumnsToContents();
+=======
+        ui->aff->setModel(model);
+        ui->aff->resizeColumnsToContents();
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     } else {
         QMessageBox::warning(this, "Erreur", "Échec du tri.");
     }
 }
 
+<<<<<<< HEAD
 void MainWindow::onpdf_clicked()
+=======
+<<<<<<< HEAD
+void MainWindow::on_pdf_3_clicked()
+=======
+void MainWindow::onpdf_clicked()
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 {
     QString defaultName = QString("taches_%1.pdf").arg(QDate::currentDate().toString("yyyyMMdd"));
     QString fichierPDF = QFileDialog::getSaveFileName(
@@ -2041,7 +2328,15 @@ void MainWindow::onpdf_clicked()
     }
 }
 
+<<<<<<< HEAD
 void MainWindow::on_stat_clicked()
+=======
+<<<<<<< HEAD
+void MainWindow::on_stat_2_clicked()
+=======
+void MainWindow::on_stat_clicked()
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 {
     tache t;
     QMap<QString, int> stats = t.obtenirStatistiques();
@@ -2063,24 +2358,50 @@ void MainWindow::on_stat_clicked()
     statDialog.exec();
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+void MainWindow::on_chercher_2_clicked()
+{
+    QString valeur = ui->cherche_2->text().trimmed();
+
+    if (valeur.isEmpty()) {
+        ui->aff_3->setModel(t.afficher());
+=======
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 void MainWindow::on_chercher_clicked()
 {
     QString valeur = ui->cherche->text().trimmed();
 
     if (valeur.isEmpty()) {
         ui->aff->setModel(t.afficher());
+<<<<<<< HEAD
+=======
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         return;
     }
 
     tache t;
     QSqlQueryModel* model = t.rechercher(valeur);
     if (model) {
+<<<<<<< HEAD
         ui->aff_4->setModel(model);
         ui->aff_4->resizeColumnsToContents();
+=======
+<<<<<<< HEAD
+        ui->aff_3->setModel(model);
+        ui->aff_3->resizeColumnsToContents();
+=======
+        ui->aff->setModel(model);
+        ui->aff->resizeColumnsToContents();
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     } else {
         QMessageBox::warning(this, "Erreur", "Échec de la recherche.");
     }
 }
+<<<<<<< HEAD
 
 //RESOURCES ***************************************************************************************************
 
@@ -2337,3 +2658,10 @@ void MainWindow::onSmsSent(QNetworkReply *reply)
     reply->deleteLater();
 }
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748

@@ -22,7 +22,23 @@ int Arduino::connect_arduino()
 {
     foreach (const QSerialPortInfo &serial_port_info, QSerialPortInfo::availablePorts())
     {
+<<<<<<< HEAD
         if (serial_port_info.portName() == "COM10")
+=======
+<<<<<<< HEAD
+        if (serial_port_info.portName() == "COM10")
+=======
+<<<<<<< HEAD
+        if (serial_port_info.portName() == "COM10")
+=======
+<<<<<<< HEAD
+        if (serial_port_info.portName() == "COM9")
+=======
+        if (serial_port_info.portName() == "COM10")
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         {
             arduino_is_available = true;
             arduino_port_name = serial_port_info.portName();

@@ -33,6 +33,10 @@ private:
     QPushButton *viewDailyButton;
     QPushButton *viewWeeklyButton;
     QPushButton *viewMonthlyButton;
+<<<<<<< HEAD
+=======
+    QDate lastSelectedDate;
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 };
 
 #endif // CALENDRIER_H

@@ -1,5 +1,13 @@
 <RCC>
+<<<<<<< HEAD
     <qresource prefix="/Images">
+=======
+<<<<<<< HEAD
+    <qresource prefix="/Images">
+=======
+    <qresource prefix="/Image">
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         <file>assets/123456.png</file>
         <file>assets/abstract-paper-background-concept.jpg</file>
         <file>assets/add_treatment.jpg</file>

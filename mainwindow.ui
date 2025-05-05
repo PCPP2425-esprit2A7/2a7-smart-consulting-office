@@ -6,8 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< HEAD
     <width>2031</width>
     <height>1068</height>
+=======
+    <width>2102</width>
+    <height>1051</height>
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +20,22 @@
   </property>
   <property name="styleSheet">
    <string notr="true">/* General application styling */
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 QWidget {
     background-color: qlineargradient(
         spread:pad, x1:0, y1:0, x2:1, y2:1,
@@ -80,8 +100,27 @@ QPushButton:pressed {
 
 /* Tables */
 QTableWidget {
+<<<<<<< HEAD
     /*background-color: rgba(255, 255, 255, 0.95);*/
 background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.835, fx:0.5, fy:0.505682, stop:0.366197 rgba(84, 253, 253, 255), stop:1 rgba(255, 255, 255, 255));
+=======
+<<<<<<< HEAD
+    /*background-color: rgba(255, 255, 255, 0.95);*/
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.835, fx:0.5, fy:0.505682, stop:0.366197 rgba(84, 253, 253, 255), stop:1 rgba(255, 255, 255, 255));
+=======
+<<<<<<< HEAD
+    /*background-color: rgba(255, 255, 255, 0.95);*/
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.835, fx:0.5, fy:0.505682, stop:0.366197 rgba(84, 253, 253, 255), stop:1 rgba(255, 255, 255, 255));
+=======
+<<<<<<< HEAD
+    background-color: rgba(255, 255, 255, 0.95);
+=======
+    /*background-color: rgba(255, 255, 255, 0.95);*/
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.835, fx:0.5, fy:0.505682, stop:0.366197 rgba(84, 253, 253, 255), stop:1 rgba(255, 255, 255, 255));
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     border: 1.5px solid #90E0EF;
     border-radius: 6px;
     gridline-color: #ADE8F4;
@@ -134,6 +173,18 @@ QScrollBar::handle:vertical:hover {
         stop:0 #000000,
         stop:1 #1A1A1A
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}</string>
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 }
 /* Group boxes */
 QGroupBox {
@@ -162,6 +213,16 @@ QGroupBox::title {
     border-radius: 4px;
 }
 </string>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QStackedWidget" name="stackedWidget">
@@ -173,9 +234,30 @@ QGroupBox::title {
       <height>901</height>
      </rect>
     </property>
+<<<<<<< HEAD
     <property name="currentIndex">
      <number>4</number>
     </property>
+=======
+<<<<<<< HEAD
+    <property name="currentIndex">
+     <number>4</number>
+    </property>
+=======
+<<<<<<< HEAD
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+=======
+<<<<<<< HEAD
+=======
+    <property name="currentIndex">
+     <number>4</number>
+    </property>
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     <widget class="QWidget" name="Client">
      <widget class="QStackedWidget" name="stackedWidget_2">
       <property name="geometry">
@@ -187,7 +269,11 @@ QGroupBox::title {
        </rect>
       </property>
       <property name="currentIndex">
+<<<<<<< HEAD
        <number>2</number>
+=======
+       <number>0</number>
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
       </property>
       <widget class="QWidget" name="page_3">
        <widget class="QPushButton" name="sortButton">
@@ -278,6 +364,35 @@ QPushButton:pressed {
          <string/>
         </property>
        </widget>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>800</x>
+          <y>40</y>
+          <width>101</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/new/prefix5/ttqqq-removebg-preview.png);
+image: url(:/new/prefix5/ttqqq-removebg-preview.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
        <widget class="QLineEdit" name="lineEditCIN">
         <property name="geometry">
          <rect>
@@ -713,7 +828,22 @@ QPushButton:pressed {
         <property name="styleSheet">
          <string notr="true">QPushButton {
 	
+<<<<<<< HEAD
 	
+=======
+<<<<<<< HEAD
+	
+=======
+<<<<<<< HEAD
+	
+=======
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 	image: url(:/Images/icons/plus-circle.svg);
     background-color: qlineargradient(
         spread:pad, x1:0, y1:0, x2:1, y2:1, 
@@ -750,6 +880,19 @@ QPushButton:pressed {
        <zorder>lineEdit_nbr_consultation</zorder>
        <zorder>sortButton</zorder>
        <zorder>searchButton</zorder>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+       <zorder>label_2</zorder>
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
        <zorder>lineEditCIN</zorder>
        <zorder>tableView</zorder>
        <zorder>btnSupprimer</zorder>
@@ -797,7 +940,30 @@ QGroupBox {
     margin-top: 10px;
     padding: 10px;
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+QLineEdit {
+    background-color: transparent;  /* Make the input fields transparent */
+    border: 2px solid rgba(248, 248, 147, 255);  /* Yellow border to maintain consistency */
+    border-radius: 8px;  /* Rounded corners for a smooth look */
+    padding: 5px;  /* Padding to give space inside the input */
+    color: white;  /* Text color to ensure visibility */
+    font-size: 14px;  /* Adjust font size */
+}
+=======
+
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
 QLineEdit:focus {
     border: 2px solid rgba(255, 255, 147, 255);  /* Brighter border when the input is focused */
@@ -814,6 +980,21 @@ QLabel {
 QLabel:hover {
     color: rgba(248, 248, 147, 255);  /* Yellow text on hover */
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+</string>
+        </property>
+        <property name="title">
+         <string>ajouter un tache</string>
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 /* Group boxes */
 QGroupBox {
     background-color: transparent;  /* Transparent to blend with the rest of the interface */
@@ -836,6 +1017,16 @@ QGroupBox::title {
         </property>
         <property name="title">
          <string>Ajouter un Client</string>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         </property>
         <widget class="QPushButton" name="btnAjouter">
          <property name="geometry">
@@ -890,10 +1081,35 @@ QPushButton:focus {
         <widget class="QWidget" name="gridLayoutWidget">
          <property name="geometry">
           <rect>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+           <x>10</x>
+           <y>50</y>
+           <width>461</width>
+           <height>417</height>
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
            <x>20</x>
            <y>50</y>
            <width>481</width>
            <height>461</height>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
           </rect>
          </property>
          <layout class="QGridLayout" name="gridLayout">
@@ -942,7 +1158,23 @@ QPushButton:focus {
           <item row="0" column="1">
            <widget class="QLineEdit" name="lineEdit_cin">
             <property name="styleSheet">
+<<<<<<< HEAD
              <string notr="true">color: #1A2C79;</string>
+=======
+<<<<<<< HEAD
+             <string notr="true">color: #1A2C79;</string>
+=======
+<<<<<<< HEAD
+             <string notr="true">color: #1A2C79;</string>
+=======
+<<<<<<< HEAD
+             <string notr="true">color: rgb(9, 9, 9);</string>
+=======
+             <string notr="true">color: #1A2C79;</string>
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
             </property>
            </widget>
           </item>
@@ -1030,7 +1262,30 @@ QGroupBox {
     margin-top: 10px;
     padding: 10px;
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+QLineEdit {
+    background-color: transparent;  /* Make the input fields transparent */
+    border: 2px solid rgba(248, 248, 147, 255);  /* Yellow border to maintain consistency */
+    border-radius: 8px;  /* Rounded corners for a smooth look */
+    padding: 5px;  /* Padding to give space inside the input */
+    color: white;  /* Text color to ensure visibility */
+    font-size: 14px;  /* Adjust font size */
+}
+=======
+
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
 QLineEdit:focus {
     border: 2px solid rgba(255, 255, 147, 255);  /* Brighter border when the input is focused */
@@ -1047,6 +1302,21 @@ QLabel {
 QLabel:hover {
     color: rgba(248, 248, 147, 255);  /* Yellow text on hover */
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+</string>
+        </property>
+        <property name="title">
+         <string>Ajouter Date</string>
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 /* Group boxes */
 QGroupBox {
     background-color: transparent;  /* Transparent to blend with the rest of the interface */
@@ -1069,6 +1339,16 @@ QGroupBox::title {
         </property>
         <property name="title">
          <string>Ajouter la date</string>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         </property>
         <widget class="QCalendarWidget" name="calendarWidget">
          <property name="geometry">
@@ -1335,7 +1615,19 @@ QPushButton:focus {
        </rect>
       </property>
       <property name="currentIndex">
+<<<<<<< HEAD
        <number>1</number>
+=======
+<<<<<<< HEAD
+       <number>1</number>
+=======
+<<<<<<< HEAD
+       <number>0</number>
+=======
+       <number>1</number>
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
       </property>
       <widget class="QWidget" name="page">
        <widget class="QPushButton" name="update">
@@ -1412,7 +1704,23 @@ QPushButton:pressed {
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton {
+<<<<<<< HEAD
 	image: url(:/Images/icons/search.svg);
+=======
+<<<<<<< HEAD
+	image: url(:/Images/icons/search.svg);
+=======
+<<<<<<< HEAD
+	image: url(:/Images/icons/search.svg);
+=======
+<<<<<<< HEAD
+	image: url(:/images/icons/search.svg);
+=======
+	image: url(:/Images/icons/search.svg);
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
    
 	color: rgb(249, 249, 249);
     color: white;              /* Texte en blanc */
@@ -1421,11 +1729,42 @@ QPushButton:pressed {
     padding: 10px 20px;        /* Espacement interne */
     font-size: 14px;           /* Taille du texte */
     font-weight: bold;         /* Texte en gras */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
 	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:1.363, fx:0.5, fy:0.5, stop:0 rgba(165, 165, 165, 255), stop:1 rgba(255, 255, 255, 255));
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 
 QPushButton:pressed {
     background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
@@ -1439,8 +1778,28 @@ QPushButton:pressed {
        <widget class="QLabel" name="label_3">
         <property name="geometry">
          <rect>
+<<<<<<< HEAD
           <x>1180</x>
           <y>-20</y>
+=======
+<<<<<<< HEAD
+          <x>1180</x>
+          <y>-20</y>
+=======
+<<<<<<< HEAD
+          <x>1180</x>
+          <y>-20</y>
+=======
+<<<<<<< HEAD
+          <x>1130</x>
+          <y>10</y>
+=======
+          <x>1180</x>
+          <y>-20</y>
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
           <width>101</width>
           <height>71</height>
          </rect>
@@ -1507,7 +1866,23 @@ QPushButton:pressed {
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton {
+<<<<<<< HEAD
 	image: url(:/Images/icons/activity.svg);
+=======
+<<<<<<< HEAD
+	image: url(:/Images/icons/activity.svg);
+=======
+<<<<<<< HEAD
+	image: url(:/Images/icons/activity.svg);
+=======
+<<<<<<< HEAD
+	image: url(:/images/icons/activity.svg);
+=======
+	image: url(:/Images/icons/activity.svg);
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
 	color: rgb(255, 255, 255);
     background-color: qlineargradient(
         spread:pad, x1:0, y1:0, x2:1, y2:1, 
@@ -1587,9 +1962,33 @@ QPushButton:pressed {
        <widget class="QWidget" name="verticalLayoutWidget_3">
         <property name="geometry">
          <rect>
+<<<<<<< HEAD
           <x>630</x>
           <y>390</y>
           <width>531</width>
+=======
+<<<<<<< HEAD
+          <x>630</x>
+          <y>390</y>
+          <width>531</width>
+=======
+<<<<<<< HEAD
+          <x>630</x>
+          <y>390</y>
+          <width>531</width>
+=======
+<<<<<<< HEAD
+          <x>750</x>
+          <y>390</y>
+          <width>381</width>
+=======
+          <x>630</x>
+          <y>390</y>
+          <width>531</width>
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
           <height>251</height>
          </rect>
         </property>
@@ -1606,7 +2005,23 @@ QPushButton:pressed {
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton {
+<<<<<<< HEAD
 	image: url(:/Images/icons/download.svg);
+=======
+<<<<<<< HEAD
+	image: url(:/Images/icons/download.svg);
+=======
+<<<<<<< HEAD
+	image: url(:/Images/icons/download.svg);
+=======
+<<<<<<< HEAD
+	image: url(:/images/icons/download.svg);
+=======
+	image: url(:/Images/icons/download.svg);
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     background-color: qlineargradient(
         spread:pad, x1:0, y1:0, x2:1, y2:1, 
         stop:0 #2b2b2b,   /* Noir foncé */
@@ -1642,6 +2057,25 @@ QPushButton:pressed {
        <widget class="QPushButton" name="asciibutton">
         <property name="geometry">
          <rect>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <x>170</x>
+          <y>400</y>
+          <width>51</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/images/icons/info.svg);</string>
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
           <x>10</x>
           <y>10</y>
           <width>61</width>
@@ -1650,6 +2084,16 @@ QPushButton:pressed {
         </property>
         <property name="styleSheet">
          <string notr="true">image: url(:/Images/icons/info.svg);</string>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         </property>
         <property name="text">
          <string/>
@@ -1666,7 +2110,23 @@ QPushButton:pressed {
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton {
+<<<<<<< HEAD
 	image: url(:/Images/icons/plus-circle.svg);
+=======
+<<<<<<< HEAD
+	image: url(:/Images/icons/plus-circle.svg);
+=======
+<<<<<<< HEAD
+	image: url(:/Images/icons/plus-circle.svg);
+=======
+<<<<<<< HEAD
+	image: url(:/images/icons/plus-circle.svg);
+=======
+	image: url(:/Images/icons/plus-circle.svg);
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     background-color: qlineargradient(
         spread:pad, x1:0, y1:0, x2:1, y2:1, 
         stop:0 #2b2b2b,   /* Noir foncé */
@@ -2048,6 +2508,17 @@ QPushButton:pressed {
       </widget>
      </widget>
     </widget>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     <widget class="QWidget" name="Formtaion">
      <widget class="QPushButton" name="presence">
       <property name="geometry">
@@ -2236,6 +2707,16 @@ QPushButton:pressed {
        <font>
         <family>Inter</family>
         <pointsize>11</pointsize>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <weight>75</weight>
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         <bold>true</bold>
        </font>
       </property>
@@ -2907,8 +3388,23 @@ QPushButton:pressed {
        <rect>
         <x>40</x>
         <y>40</y>
+<<<<<<< HEAD
         <width>1721</width>
         <height>841</height>
+=======
+<<<<<<< HEAD
+        <width>1721</width>
+        <height>841</height>
+=======
+<<<<<<< HEAD
+        <width>1451</width>
+        <height>711</height>
+=======
+        <width>1721</width>
+        <height>841</height>
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
        </rect>
       </property>
       <property name="styleSheet">
@@ -2920,7 +3416,19 @@ border-radius:10px ;
 </string>
       </property>
       <property name="currentIndex">
+<<<<<<< HEAD
        <number>1</number>
+=======
+<<<<<<< HEAD
+       <number>0</number>
+=======
+<<<<<<< HEAD
+       <number>0</number>
+=======
+       <number>1</number>
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
       </property>
       <widget class="QWidget" name="list_employe_17">
        <property name="styleSheet">
@@ -2976,6 +3484,21 @@ QScrollBar:horizontal {
 </string>
         </property>
         <property name="verticalScrollBarPolicy">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustIgnored</enum>
+=======
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
          <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
         </property>
         <property name="horizontalScrollBarPolicy">
@@ -2983,12 +3506,31 @@ QScrollBar:horizontal {
         </property>
         <property name="sizeAdjustPolicy">
          <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         </property>
         <property name="showGrid">
          <bool>false</bool>
         </property>
         <property name="gridStyle">
+<<<<<<< HEAD
          <enum>Qt::PenStyle::NoPen</enum>
+=======
+<<<<<<< HEAD
+         <enum>Qt::PenStyle::NoPen</enum>
+=======
+<<<<<<< HEAD
+         <enum>Qt::NoPen</enum>
+=======
+         <enum>Qt::PenStyle::NoPen</enum>
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         </property>
         <property name="sortingEnabled">
          <bool>false</bool>
@@ -3154,7 +3696,19 @@ background-color : white ;
 color : black ;  </string>
          </property>
          <property name="echoMode">
+<<<<<<< HEAD
           <enum>QLineEdit::EchoMode::Normal</enum>
+=======
+<<<<<<< HEAD
+          <enum>QLineEdit::EchoMode::Normal</enum>
+=======
+<<<<<<< HEAD
+          <enum>QLineEdit::Normal</enum>
+=======
+          <enum>QLineEdit::EchoMode::Normal</enum>
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
          </property>
          <property name="placeholderText">
           <string>search by id , name or first name </string>
@@ -3455,7 +4009,19 @@ border : none ;</string>
           </rect>
          </property>
          <property name="layoutDirection">
+<<<<<<< HEAD
           <enum>Qt::LayoutDirection::LeftToRight</enum>
+=======
+<<<<<<< HEAD
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+=======
+<<<<<<< HEAD
+          <enum>Qt::LeftToRight</enum>
+=======
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
          </property>
          <property name="styleSheet">
           <string notr="true">font-size : 40px ; 
@@ -3618,7 +4184,11 @@ border-radius:10px ;
 </string>
         </property>
         <property name="currentIndex">
+<<<<<<< HEAD
          <number>0</number>
+=======
+         <number>2</number>
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
         </property>
         <widget class="QWidget" name="list_employe_18">
          <property name="styleSheet">
@@ -3674,6 +4244,21 @@ QScrollBar:horizontal {
 </string>
           </property>
           <property name="verticalScrollBarPolicy">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustIgnored</enum>
+=======
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
            <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
           </property>
           <property name="horizontalScrollBarPolicy">
@@ -3681,12 +4266,31 @@ QScrollBar:horizontal {
           </property>
           <property name="sizeAdjustPolicy">
            <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
           </property>
           <property name="showGrid">
            <bool>false</bool>
           </property>
           <property name="gridStyle">
+<<<<<<< HEAD
            <enum>Qt::PenStyle::NoPen</enum>
+=======
+<<<<<<< HEAD
+           <enum>Qt::PenStyle::NoPen</enum>
+=======
+<<<<<<< HEAD
+           <enum>Qt::NoPen</enum>
+=======
+           <enum>Qt::PenStyle::NoPen</enum>
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
           </property>
           <property name="sortingEnabled">
            <bool>false</bool>
@@ -3747,7 +4351,19 @@ QScrollBar:horizontal {
            </rect>
           </property>
           <property name="layoutDirection">
+<<<<<<< HEAD
            <enum>Qt::LayoutDirection::LeftToRight</enum>
+=======
+<<<<<<< HEAD
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+=======
+<<<<<<< HEAD
+           <enum>Qt::LeftToRight</enum>
+=======
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
           </property>
           <property name="styleSheet">
            <string notr="true">background-color : #1B2028;
@@ -3871,7 +4487,19 @@ background-color : white ;
 color : black ;  </string>
            </property>
            <property name="echoMode">
+<<<<<<< HEAD
             <enum>QLineEdit::EchoMode::Normal</enum>
+=======
+<<<<<<< HEAD
+            <enum>QLineEdit::EchoMode::Normal</enum>
+=======
+<<<<<<< HEAD
+            <enum>QLineEdit::Normal</enum>
+=======
+            <enum>QLineEdit::EchoMode::Normal</enum>
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
            </property>
            <property name="placeholderText">
             <string>search by id , name or first name </string>
@@ -4228,7 +4856,19 @@ border : none ;</string>
             </rect>
            </property>
            <property name="layoutDirection">
+<<<<<<< HEAD
             <enum>Qt::LayoutDirection::LeftToRight</enum>
+=======
+<<<<<<< HEAD
+            <enum>Qt::LayoutDirection::LeftToRight</enum>
+=======
+<<<<<<< HEAD
+            <enum>Qt::LeftToRight</enum>
+=======
+            <enum>Qt::LayoutDirection::LeftToRight</enum>
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
            </property>
            <property name="styleSheet">
             <string notr="true">font-size : 40px ; 
@@ -5340,6 +5980,7 @@ QPushButton:disabled {
       </widget>
      </widget>
     </widget>
+<<<<<<< HEAD
     <widget class="QWidget" name="Resources">
      <widget class="QGroupBox" name="box_1">
       <property name="geometry">
@@ -5364,6 +6005,51 @@ QPushButton:disabled {
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton {
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+    <widget class="QWidget" name="Resources">
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>80</y>
+        <width>1591</width>
+        <height>771</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/new/prefix1/abstract-paper-background-concept.jpg);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="idedit">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>670</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sup_2">
+      <property name="geometry">
+       <rect>
+        <x>838</x>
+        <y>669</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     background-color: qlineargradient(
         spread:pad, x1:0, y1:0, x2:1, y2:1, 
         stop:0 #2b2b2b,   /* Noir foncé */
@@ -5391,6 +6077,7 @@ QPushButton:pressed {
     background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
 }
 </string>
+<<<<<<< HEAD
        </property>
        <property name="text">
         <string>supprimer</string>
@@ -5413,6 +6100,237 @@ QPushButton:pressed {
        </property>
        <property name="styleSheet">
         <string notr="true">QGroupBox::title {
+=======
+      </property>
+      <property name="text">
+       <string>supprimer</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="Trie">
+      <property name="geometry">
+       <rect>
+        <x>1370</x>
+        <y>240</y>
+        <width>76</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>id</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>datee</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="recuperer">
+      <property name="geometry">
+       <rect>
+        <x>988</x>
+        <y>669</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>afficher</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="aff_3">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>330</y>
+        <width>621</width>
+        <height>321</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pdf_3">
+      <property name="geometry">
+       <rect>
+        <x>1230</x>
+        <y>280</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>pdf</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="viewhistory">
+      <property name="geometry">
+       <rect>
+<<<<<<< HEAD
+        <x>1260</x>
+        <y>670</y>
+=======
+        <x>1300</x>
+        <y>660</y>
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>history</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="stat_2">
+      <property name="geometry">
+       <rect>
+        <x>1110</x>
+        <y>280</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>stat</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_12">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>110</y>
+        <width>301</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>301</width>
+        <height>511</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox::title {
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     subcontrol-origin: margin;
     subcontrol-position: top center;  /* Center the title */
     padding: 0 10px;
@@ -5453,6 +6371,7 @@ QLabel:hover {
     color: rgba(248, 248, 147, 255);  /* Yellow text on hover */
 }
 </string>
+<<<<<<< HEAD
        </property>
        <property name="title">
         <string>ajouter un tache</string>
@@ -5585,6 +6504,140 @@ QLabel:hover {
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton {
+=======
+      </property>
+      <property name="title">
+       <string>ajouter un tache</string>
+      </property>
+      <widget class="QLabel" name="label_54">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>120</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>NOM</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_55">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>180</y>
+         <width>121</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DESCRIPTION</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_56">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>250</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DATEE</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="description_2">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>180</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(4, 4, 4);</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="priorite">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>300</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(7, 7, 7);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_57">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>310</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PRIORITE</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="nom_2">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>120</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(6, 6, 6);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_58">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>370</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>STATUT</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="statut_4">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>360</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(9, 9, 9);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ajoute_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>440</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     background: none;
     background-color: qlineargradient(
         spread:pad, x1:0, y1:0, x2:1, y2:1, 
@@ -5619,6 +6672,7 @@ QPushButton:focus {
     outline: none; /* Supprime l'effet de focus (contour) */
 }
 </string>
+<<<<<<< HEAD
         </property>
         <property name="text">
          <string>ajouter</string>
@@ -6005,6 +7059,19 @@ QPushButton:pressed {
          <x>1200</x>
          <y>550</y>
          <width>111</width>
+=======
+       </property>
+       <property name="text">
+        <string>ajouter</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="modifier_3">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>440</y>
+         <width>131</width>
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
          <height>41</height>
         </rect>
        </property>
@@ -6039,6 +7106,7 @@ QPushButton:pressed {
 </string>
        </property>
        <property name="text">
+<<<<<<< HEAD
         <string>calandrier</string>
        </property>
       </widget>
@@ -6118,6 +7186,188 @@ image: url(:/new/prefix5/ttqqq-removebg-preview.png);</string>
       <zorder>idedit</zorder>
      </widget>
     </widget>
+=======
+        <string>modifier</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="datee">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>250</y>
+         <width>141</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="calendarButton">
+      <property name="geometry">
+       <rect>
+<<<<<<< HEAD
+        <x>1380</x>
+        <y>670</y>
+=======
+        <x>1410</x>
+        <y>660</y>
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>calandrier</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="cherche_2">
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>230</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="tri_2">
+      <property name="geometry">
+       <rect>
+        <x>1350</x>
+        <y>280</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>tri</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="chercher_2">
+      <property name="geometry">
+       <rect>
+        <x>1230</x>
+        <y>230</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 #2b2b2b,   /* Noir foncé */
+        stop:0.5 #1e1e1e, /* Noir intermédiaire */
+        stop:1 #000000    /* Noir profond */
+    );
+    color: white;              /* Texte en blanc */
+    border: 2px solid #555;    /* Bordure gris foncé */
+    border-radius: 10px;       /* Coins arrondis */
+    padding: 10px 20px;        /* Espacement interne */
+    font-size: 14px;           /* Taille du texte */
+    font-weight: bold;         /* Texte en gras */
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:1,
+        stop:0 #3b3b3b,  /* Gris plus clair au survol */
+        stop:0.5 #292929,  
+        stop:1 #121212  
+    );
+}
+
+QPushButton:pressed {
+    background-color: #1a1a1a;  /* Noir encore plus profond lors de l'appui */
+}
+</string>
+      </property>
+      <property name="text">
+       <string>cherche</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="ass">
+      <property name="geometry">
+       <rect>
+        <x>1460</x>
+        <y>240</y>
+        <width>76</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>asc</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>desc</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+<<<<<<< HEAD
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     <widget class="QWidget" name="page_8">
      <widget class="QPushButton" name="pdf_4">
       <property name="geometry">
@@ -6904,6 +8154,13 @@ QPushButton:pressed {
      <zorder>cherche_3</zorder>
      <zorder>label_11</zorder>
     </widget>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget_4">
     <property name="geometry">
@@ -6911,14 +8168,54 @@ QPushButton:pressed {
       <x>10</x>
       <y>90</y>
       <width>261</width>
+<<<<<<< HEAD
       <height>901</height>
+=======
+<<<<<<< HEAD
+      <height>901</height>
+=======
+<<<<<<< HEAD
+      <height>901</height>
+=======
+<<<<<<< HEAD
+      <height>561</height>
+=======
+      <height>901</height>
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_4">
      <item>
+<<<<<<< HEAD
       <widget class="QPushButton" name="CONSULTANTbtn">
        <property name="text">
         <string>Consultants</string>
+=======
+<<<<<<< HEAD
+      <widget class="QPushButton" name="CONSULTANTbtn">
+       <property name="text">
+        <string>Consultants</string>
+=======
+<<<<<<< HEAD
+      <widget class="QPushButton" name="CONSULTANTbtn">
+       <property name="text">
+        <string>Consultants</string>
+=======
+<<<<<<< HEAD
+      <widget class="QPushButton" name="CLIENTSbtn">
+       <property name="text">
+        <string>Clients</string>
+=======
+      <widget class="QPushButton" name="CONSULTANTbtn">
+       <property name="text">
+        <string>Consultants</string>
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
        </property>
       </widget>
      </item>
@@ -6929,6 +8226,19 @@ QPushButton:pressed {
        </property>
       </widget>
      </item>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </layout>
+   </widget>
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
      <item>
       <widget class="QPushButton" name="CLIENTSbtn">
        <property name="text">
@@ -6943,6 +8253,10 @@ QPushButton:pressed {
        </property>
       </widget>
      </item>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
      <item>
       <widget class="QPushButton" name="TACHESbtn">
        <property name="text">
@@ -6950,6 +8264,13 @@ QPushButton:pressed {
        </property>
       </widget>
      </item>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
      <item>
       <widget class="QPushButton" name="RESOURCESbtn">
        <property name="text">
@@ -6957,6 +8278,7 @@ QPushButton:pressed {
        </property>
       </widget>
      </item>
+<<<<<<< HEAD
      <item>
       <spacer name="verticalSpacer">
        <property name="orientation">
@@ -6970,6 +8292,12 @@ QPushButton:pressed {
        </property>
       </spacer>
      </item>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     </layout>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -7037,14 +8365,37 @@ font-size : 15px;</string>
      </property>
     </widget>
    </widget>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
+<<<<<<< HEAD
      <width>2031</width>
      <height>25</height>
+=======
+     <width>2102</width>
+<<<<<<< HEAD
+     <height>25</height>
+=======
+<<<<<<< HEAD
+     <height>22</height>
+=======
+     <height>29</height>
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
+>>>>>>> 7b691f662826127da815b7d7434c9c56665f8748
     </rect>
    </property>
   </widget>
