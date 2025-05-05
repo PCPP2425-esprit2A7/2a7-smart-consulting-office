@@ -8,12 +8,25 @@
 #include "qlabel.h"
 #include "qstandarditemmodel.h"
 #include "projet.h"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#include <QChartView> // Inclure pour QChartView
+#include <QSqlQuery>
+=======
+#include "tache.h"
+#include "calendrier.h"
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 #include <QChartView> // Inclure pour QChartView
 #include <QSqlQuery>
 #include <QItemSelection>
 #include <QTableView>
 #include <QValueAxis>
 #include <QBarCategoryAxis>
+<<<<<<< HEAD
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -67,6 +80,14 @@ private slots:
     void afficherDashboardASCII();
     void onbtnAfficherDashboard_clicked();
     void showAsciiDashboardPage();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
     //FORMATION ***************************************
     void on_ajouter_clicked();
 
@@ -105,8 +126,24 @@ private slots:
     void navigateToclient();
     void navigateToformation();
     void stop2();
+<<<<<<< HEAD
 
 
+=======
+//TACHE ********************************************************************************************************
+
+    void on_ajoute_clicked();
+    void onmodifier_clicked2();
+    void on_sup_clicked();
+    void on_recuperer_clicked();
+    void on_viewhistory_clicked();
+    void on_tri_clicked();
+    void onpdf_clicked();
+    void on_stat_clicked();
+    void on_chercher_clicked();
+    void on_calendarButton_clicked();
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 
 
 
@@ -129,9 +166,22 @@ private:
 
     // Nouvelle méthode pour afficher le graphique des statistiques
     QChartView* stat(); // Fonction pour générer le graphique des statistiques
+<<<<<<< HEAD
     int selectedFormationId = 3;
 
     QWidget *chartContainer = nullptr;
+=======
+<<<<<<< HEAD
+
+=======
+    int selectedFormationId = 3;
+
+    QWidget *chartContainer = nullptr;
+    //TAHCE ***************************************
+    tache t;
+    Calendrier *calendar;
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 
 };
 #endif // MAINWINDOW_H

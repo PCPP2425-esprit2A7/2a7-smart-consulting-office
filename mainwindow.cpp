@@ -1,10 +1,24 @@
 #include "mainwindow.h"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#include "qsqlerror.h"
+#include "ui_mainwindow.h"
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 #include "formationservice.h"
 #include "qsqlerror.h"
 #include "ui_mainwindow.h"
 #include "login.h"
 #include "ui_login.h"
 #include "usersession.h"
+<<<<<<< HEAD
+=======
+#include "tache.h"
+#include "calendrier.h"
+#include "PieChartWidget.h"
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 #include <QDebug>
 #include <QMessageBox>
 #include <QtCharts>
@@ -17,7 +31,14 @@
 #include <QFileDialog>
 #include <QSqlQuery>
 #include <QSqlRecord>
+<<<<<<< HEAD
 #include <QRegularExpression>
+=======
+<<<<<<< HEAD
+=======
+#include <QRegularExpression>
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -30,6 +51,11 @@ MainWindow::MainWindow(QWidget *parent)
     });
     connect(ui->PROJETSbtn, &QPushButton::clicked, this, [=](){
         ui->stackedWidget->setCurrentIndex(1);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
         ui->stackedWidget_3->setCurrentIndex(0);
     });
     connect(ui->FORMATIONSbtn, &QPushButton::clicked, this, [=](){
@@ -38,6 +64,13 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->CONSULTANTbtn, &QPushButton::clicked, this, [=](){
         ui->stackedWidget->setCurrentIndex(3);
     });
+<<<<<<< HEAD
+=======
+    connect(ui->RESOURCESbtn, &QPushButton::clicked, this, [=](){
+        ui->stackedWidget->setCurrentIndex(4);
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+    });
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 // CONNECT GESTION CLIENT *****************************
     model = new QStandardItemModel(this);
     model->setHorizontalHeaderLabels(QStringList()
@@ -154,6 +187,15 @@ MainWindow::MainWindow(QWidget *parent)
     ui->aff->setSelectionMode(QAbstractItemView::SingleSelection);
     ui->aff->horizontalHeader()->setStretchLastSection(true);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+}
+
+//CONNECT GESTION PROJETS ****************************************
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
     //CONNECT FORMATIONS***********************************************************************************
     connect(ui->ajouter,           &QPushButton::clicked, this, &MainWindow::on_ajouter_clicked);
     connect(ui->supprimer,         &QPushButton::clicked, this, &MainWindow::on_supprimer_clicked);
@@ -171,11 +213,68 @@ MainWindow::MainWindow(QWidget *parent)
     //CONSULTANT CONNECT *************************************************************************************
 
 
+<<<<<<< HEAD
+=======
+    // Connect the tableView's clicked and doubleClicked signals to the same slot
+    connect(ui->consultant_tableview, &QTableView::clicked, this, &MainWindow::on_tableView_activated);
+    connect(ui->consultant_tableview, &QTableView::doubleClicked, this, &MainWindow::on_tableView_activated);
+
+    // Connect the modifier button's clicked signal
+    connect(ui->modifier, &QPushButton::clicked, this, &MainWindow::on_modifier_clicked);
+
+    // Connect the delete button's clicked signal
+    connect(ui->supprimerbtn, &QPushButton::clicked, this, &MainWindow::on_supprimerbtn_clicked);
+
+    // Connect the navigation button's clicked signal
+
+
+
+    //recherche
+    connect(ui->all_search_in_e_17, &QLineEdit::textChanged, this, &MainWindow::on_searchTextChanged);
+    //trier
+    ui->up_del_cin_in_e_17->addItem("trier");
+    ui->up_del_cin_in_e_17->addItem("Nombre heures croissant");
+    ui->up_del_cin_in_e_17->addItem("Nombre heures decroissant");
+    ui->up_del_cin_in_e_17->addItem("Alphabétique croissant (Prénom)");  // Index 2
+    ui->up_del_cin_in_e_17->addItem("Alphabétique decroissant (Prénom)"); // Index 3
+
+    // Connect the combo box's currentIndexChanged signal
+    connect(ui->up_del_cin_in_e_17, QOverload<int>::of(&QComboBox::currentIndexChanged),this, &MainWindow::on_sortheureChanged);
+
+
+
+
+    // In MainWindow constructor
+    /*connect(ui->stackedWidget, &QStackedWidget::currentChanged, [this](int index) {
+        if (index == 4) {  // Page 5
+            setupStatisticsChart();
+        } else if (chartContainer) {
+            chartContainer->hide();
+        }
+    });*/
+
+    //TACHE CONNECT **********************************************************************************************************************
+    /*QSqlQueryModel *model = t.afficher();
+    qDebug() << "Nombre de taches :" << model->rowCount();*/
+    ui->aff->setModel(model);
+
+    // Initialisation du calendrier
+    calendar = new Calendrier();
+    calendar->setWindowFlags(Qt::Window | Qt::WindowCloseButtonHint);
+    calendar->setWindowTitle("Task Calendar");
+
+    // Connexion explicite du bouton calendrier
+    connect(ui->calendarButton, &QPushButton::clicked, this, &MainWindow::on_calendarButton_clicked);
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 
 
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 
 MainWindow::~MainWindow()
 {
@@ -954,6 +1053,11 @@ void MainWindow::showAsciiDashboardPage()
 {
     ui->stackedWidget_3->setCurrentIndex(2); // Replace DASHBOARD_INDEX with the correct number!
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 
 //FORMATIONS *******************************************************************************************************************************************
 
@@ -1336,7 +1440,11 @@ void MainWindow::on_sortheureChanged(int index)
 
     QSqlQuery query;
     if (query.exec(queryStr)) {
+<<<<<<< HEAD
         model->setQuery(query);
+=======
+        model->setQuery(std::move(query));
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
         // Set headers
         model->setHeaderData(0, Qt::Horizontal, tr("ID_CONS"));
         model->setHeaderData(1, Qt::Horizontal, tr("NOM_CONS"));
@@ -1395,7 +1503,11 @@ void MainWindow::on_searchTextChanged(const QString &searchText)
         query.bindValue(":search", "%" + searchText + "%");
 
         if (query.exec()) {
+<<<<<<< HEAD
             model->setQuery(query);
+=======
+            model->setQuery(std::move(query));
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
             // Set headers (same as in Afficherconsultants())
             model->setHeaderData(0, Qt::Horizontal, tr("ID_CONS"));
             model->setHeaderData(1, Qt::Horizontal, tr("NOM_CONS"));
@@ -1439,9 +1551,15 @@ void MainWindow::on_ajouterConst_clicked()
     int heures = heuresStr.toInt(&heuresOk); // Convert to int
 
     // Regular expressions for validation
+<<<<<<< HEAD
     QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for names
     QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
     QRegularExpression numberRx("^\\d+$"); // Only digits for phone number
+=======
+    static const QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for names
+    static const QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
+    static const QRegularExpression numberRx("^\\d+$"); // Only digits for phone number
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 
     // Input validation
     if (!nameRx.match(nom_cons).hasMatch() || !nameRx.match(prenom_cons).hasMatch()) {
@@ -1577,9 +1695,15 @@ void MainWindow::onmodifier_clicked()
     int heures = heuresStr.toInt(&heuresOk);
 
     // Input validation
+<<<<<<< HEAD
     QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for name fields
     QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
     QRegularExpression numberRx("^\\d+$"); // Only digits for numeric fields
+=======
+    static const QRegularExpression nameRx("^[a-zA-Z]+$"); // Only letters for name fields
+    static const QRegularExpression emailRx("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"); // Basic email validation
+    static const QRegularExpression numberRx("^\\d+$"); // Only digits for numeric fields
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
 
     if (!nameRx.match(nom_cons).hasMatch() || !nameRx.match(prenom_cons).hasMatch()) {
         QMessageBox::critical(this, tr("Erreur"), tr("Le nom et le prénom doivent contenir uniquement des lettres."), QMessageBox::Cancel);
@@ -1773,3 +1897,252 @@ void MainWindow::stop2()
                              tr("Désolé, vous n'avez pas les autorisations nécessaires pour accéder à cette page.\n"
                                 ));    }
 }
+<<<<<<< HEAD
+=======
+
+//TACHE MAINWINDOW *************************************************************************************************
+void MainWindow::on_calendarButton_clicked()
+{
+
+    calendar->show();
+    calendar->raise();  // Bring to front
+    calendar->activateWindow();  // Give focus
+    calendar->loadTasks();
+
+}
+void MainWindow::on_ajoute_clicked()
+{
+    QString nom = ui->nom->text().trimmed();
+    QString description = ui->description->text().trimmed();
+    QDate datee = ui->datee->date();
+    QString priorite = ui->priorite->text().trimmed();
+    QString statut = ui->statut->text().trimmed();
+
+    if (nom.isEmpty() || description.isEmpty()) {
+        QMessageBox::warning(this, "Erreur", "Veuillez remplir tous les champs obligatoires.");
+        return;
+    }
+
+    tache newTache(nom, description, datee, priorite, statut);
+
+    if (newTache.create()) {
+        QMessageBox::information(this, "Succès", "La tâche a été ajoutée avec succès !");
+        ui->aff->setModel(newTache.afficher());
+        // Réinitialiser les champs après ajout
+        ui->nom->clear();
+        ui->description->clear();
+        ui->priorite->clear();
+        ui->statut->clear();
+    } else {
+        QMessageBox::critical(this, "Erreur", "Échec de l'ajout de la tâche.");
+    }
+}
+
+void MainWindow::on_recuperer_clicked()
+{
+    QString idText = ui->idedit->text();
+    bool ok;
+    int id = idText.toInt(&ok);
+
+    if (!ok || id <= 0) {
+        QMessageBox::warning(this, "Erreur", "Veuillez entrer un ID valide (nombre positif).");
+        return;
+    }
+
+    if (!tache::exists(id)) {
+        QMessageBox::warning(this, "Erreur", "Aucune tâche trouvée avec cet ID.");
+        return;
+    }
+
+    tache t = tache::read(id);
+    ui->nom->setText(t.getNom());
+    ui->description->setText(t.getDescription());
+    ui->datee->setDate(t.getDatee());
+    ui->priorite->setText(t.getPriorite());
+    ui->statut->setText(t.getStatut());
+}
+
+void MainWindow::onmodifier_clicked2()
+{
+    QString idText = ui->idedit->text();
+    bool ok;
+    int id = idText.toInt(&ok);
+
+    if (!ok || id <= 0) {
+        QMessageBox::warning(this, "Erreur", "ID invalide.");
+        return;
+    }
+
+    if (!tache::exists(id)) {
+        QMessageBox::warning(this, "Erreur", "Tâche introuvable.");
+        return;
+    }
+
+    QString nom = ui->nom->text().trimmed();
+    QString description = ui->description->text().trimmed();
+    QDate datee = ui->datee->date();
+    QString priorite = ui->priorite->text().trimmed();
+    QString statut = ui->statut->text().trimmed();
+
+    if (t.update(id, nom, description, datee, priorite, statut)) {
+        QMessageBox::information(this, "Succès", "Tâche mise à jour.");
+        ui->aff->setModel(t.afficher());
+    } else {
+        QMessageBox::warning(this, "Erreur", "Échec de la mise à jour.");
+    }
+}
+
+void MainWindow::on_sup_clicked()
+{
+    QString idText = ui->idedit->text();
+    bool ok;
+    int id = idText.toInt(&ok);
+
+    if (!ok || id <= 0) {
+        QMessageBox::warning(this, "Erreur", "ID invalide.");
+        return;
+    }
+
+    if (QMessageBox::question(this, "Confirmation",
+                              "Voulez-vous vraiment supprimer cette tâche?",
+                              QMessageBox::Yes|QMessageBox::No) == QMessageBox::No) {
+        return;
+    }
+
+    if (t.remove(id)) {
+        QMessageBox::information(this, "Succès", "Tâche supprimée.");
+        ui->aff->setModel(t.afficher());
+    } else {
+        QMessageBox::warning(this, "Erreur", "Échec de la suppression.");
+    }
+}
+
+void MainWindow::on_viewhistory_clicked()
+{
+    QString idText = ui->idedit->text();
+    bool ok;
+    int id = idText.toInt(&ok);
+
+    if (!ok || id <= 0) {
+        QScopedPointer<QSqlQueryModel> historyModel(tache::gettHistory());
+        if (historyModel && historyModel->rowCount() > 0) {
+            QDialog historyDialog(this);
+            historyDialog.setWindowTitle("Historique des modifications");
+            historyDialog.resize(800, 400);
+
+            QTableView* historyView = new QTableView(&historyDialog);
+            historyView->setModel(historyModel.data());
+            historyView->resizeColumnsToContents();
+
+            QVBoxLayout layout(&historyDialog);
+            layout.addWidget(historyView);
+
+            historyDialog.exec();
+        }
+        return ;
+    }
+
+    QScopedPointer<QSqlQueryModel> historyModel(tache::getHistory(id));
+    if (historyModel && historyModel->rowCount() > 0) {
+        QDialog historyDialog(this);
+        historyDialog.setWindowTitle("Historique des modifications");
+        historyDialog.resize(800, 400);
+
+        QTableView* historyView = new QTableView(&historyDialog);
+        historyView->setModel(historyModel.data());
+        historyView->resizeColumnsToContents();
+
+        QVBoxLayout layout(&historyDialog);
+        layout.addWidget(historyView);
+
+        historyDialog.exec();
+    } else {
+        QMessageBox::information(this, "Information", "Aucun historique disponible.");
+    }
+}
+
+void MainWindow::on_tri_clicked()
+{
+    tache t;
+    QString critere = ui->Trie->currentText().toLower();
+
+    QString ass = ui->ass->currentText().toLower();
+
+
+
+    QSqlQueryModel* model = t.trier(critere,ass);
+    if (model) {
+        ui->aff->setModel(model);
+        ui->aff->resizeColumnsToContents();
+    } else {
+        QMessageBox::warning(this, "Erreur", "Échec du tri.");
+    }
+}
+
+void MainWindow::onpdf_clicked()
+{
+    QString defaultName = QString("taches_%1.pdf").arg(QDate::currentDate().toString("yyyyMMdd"));
+    QString fichierPDF = QFileDialog::getSaveFileName(
+        this,
+        "Enregistrer le PDF",
+        defaultName,
+        "Fichiers PDF (*.pdf)");
+
+    if (fichierPDF.isEmpty()) {
+        return;
+    }
+
+    if (!fichierPDF.endsWith(".pdf", Qt::CaseInsensitive)) {
+        fichierPDF += ".pdf";
+    }
+
+    tache t;
+    if (t.genererPDF(fichierPDF)) {
+        QMessageBox::information(this, "Succès", "PDF généré avec succès.");
+    } else {
+        QMessageBox::warning(this, "Erreur", "Échec de la génération du PDF.");
+    }
+}
+
+void MainWindow::on_stat_clicked()
+{
+    tache t;
+    QMap<QString, int> stats = t.obtenirStatistiques();
+
+    if (stats.isEmpty()) {
+        QMessageBox::warning(this, "Erreur", "Aucune donnée statistique disponible.");
+        return;
+    }
+
+    QDialog statDialog(this);
+    statDialog.setWindowTitle("Statistiques des tâches");
+    statDialog.resize(600, 600);
+
+    PieChartWidget* chartWidget = new PieChartWidget(stats, &statDialog);
+
+    QVBoxLayout layout(&statDialog);
+    layout.addWidget(chartWidget);
+
+    statDialog.exec();
+}
+
+void MainWindow::on_chercher_clicked()
+{
+    QString valeur = ui->cherche->text().trimmed();
+
+    if (valeur.isEmpty()) {
+        ui->aff->setModel(t.afficher());
+        return;
+    }
+
+    tache t;
+    QSqlQueryModel* model = t.rechercher(valeur);
+    if (model) {
+        ui->aff->setModel(model);
+        ui->aff->resizeColumnsToContents();
+    } else {
+        QMessageBox::warning(this, "Erreur", "Échec de la recherche.");
+    }
+}
+>>>>>>> 00ca2d6ddb272cb69d6813b4c25604876d18434f
+>>>>>>> 64944a0beb23206c62f4e06e257680e77b7f15af
