@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>assets/123456.png</file>
+        <file>assets/abstract-paper-background-concept.jpg</file>
+        <file>assets/add_treatment.jpg</file>
+        <file>assets/admin.png</file>
+        <file>assets/assetss.qrc</file>
+        <file>assets/assssts.qrc</file>
+        <file>assets/clients.png</file>
+        <file>assets/delete-client.png</file>
+        <file>assets/femme.png</file>
+        <file>assets/homePic.png</file>
+        <file>assets/homme.png</file>
+        <file>assets/kine.png</file>
+        <file>assets/loginBk.png</file>
+        <file>assets/LOGO.png</file>
+        <file>assets/logoo.png</file>
+        <file>assets/number_equipment.png</file>
+        <file>assets/Resources.qrc</file>
+        <file>assets/ressources.qrc</file>
+        <file>assets/secretary.png</file>
+        <file>assets/solid care white version.png</file>
+        <file>assets/treatment_update.jpg</file>
+        <file>assets/treatments_amount.png</file>
+    </qresource>
+</RCC>
