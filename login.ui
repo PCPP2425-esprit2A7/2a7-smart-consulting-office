@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Login</class>
+ <widget class="QDialog" name="Login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Login</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1611</width>
+     <height>911</height>
+    </rect>
+   </property>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>-1</y>
+      <width>1611</width>
+      <height>911</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>-1</y>
+       <width>1601</width>
+       <height>901</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="page">
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1611</width>
+         <height>901</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../Pictures/6706379_3418448 (4).jpg</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>140</y>
+         <width>971</width>
+         <height>721</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../_Pngtree_flat_login_user_interface_3726150-removebg.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_nom">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>370</y>
+         <width>411</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: black;
+font-family: Arial; /* Change &quot;Arial&quot; to your desired font family */
+font-size: 34px; /* Change &quot;14px&quot; to your desired font size */</string>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_nom_2">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>440</y>
+         <width>411</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: black;
+font-family: Arial; /* Change &quot;Arial&quot; to your desired font family */
+font-size: 34px; /* Change &quot;14px&quot; to your desired font size */</string>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>570</y>
+         <width>291</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Calibri</family>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(85, 170, 255);
+</string>
+       </property>
+       <property name="text">
+        <string>LOGIN</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>510</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Calibri</family>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Réinitialiser le mot de passe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>310</y>
+         <width>311</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+color: rgb(85, 170, 255);
+font-family: Arial; /* Change &quot;Arial&quot; to your desired font family */
+font-size: 34px; /* Change &quot;14px&quot; to your desired font size */</string>
+       </property>
+       <property name="text">
+        <string>          WELCOME</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>380</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font-family: Arial; /* Change &quot;Arial&quot; to your desired font family */
+font-size: 12px; /* Change &quot;14px&quot; to your desired font size */</string>
+       </property>
+       <property name="text">
+        <string>Entrer votre mail</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>450</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+font-family: Arial; /* Change &quot;Arial&quot; to your desired font family */
+font-size: 12px; /* Change &quot;14px&quot; to your desired font size */</string>
+       </property>
+       <property name="text">
+        <string>Entrer votre mot de passe</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>1611</width>
+         <height>901</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../Pictures/6706379_3418448 (4).jpg</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>160</y>
+         <width>911</width>
+         <height>611</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../17893271_5931274-removebg-preview (1).png</pixmap>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="rolebox_3">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>380</y>
+         <width>521</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: black;
+font-family: Arial; /* Change &quot;Arial&quot; to your desired font family */
+font-size: 16px; /* Change &quot;14px&quot; to your desired font size */</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Quelle est votre date de naissance ?</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Quel est le titre de votre certification professionnelle la plus récente ?</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Quel est le nom de votre superviseur professionnel dans notre entreprise ?</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Quelle est la date à laquelle vous avez rejoint notre entreprise ?</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Quelle est la spécialisation de votre premier diplôme ?</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="course_ending_7">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>330</y>
+         <width>161</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>-1</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+color: rgb(85, 170, 255);
+font-family: Arial; /* Change &quot;Arial&quot; to your desired font family */
+font-size: 34px; /* Change &quot;14px&quot; to your desired font size */</string>
+       </property>
+       <property name="text">
+        <string>Question</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="course_ending_6">
+       <property name="geometry">
+        <rect>
+         <x>860</x>
+         <y>440</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>-1</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+color: rgb(85, 170, 255);
+font-family: Arial; /* Change &quot;Arial&quot; to your desired font family */
+font-size: 34px; /* Change &quot;14px&quot; to your desired font size */
+</string>
+       </property>
+       <property name="text">
+        <string>Reponse</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_password_3">
+       <property name="geometry">
+        <rect>
+         <x>840</x>
+         <y>490</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Mot de passe</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>550</y>
+         <width>171</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Calibri</family>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Confirmer</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="geometry">
+        <rect>
+         <x>1000</x>
+         <y>600</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Calibri</family>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>retourner</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_password_5">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>490</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Mot de passe</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="course_ending_9">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>440</y>
+         <width>191</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>-1</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+color: rgb(85, 170, 255);
+font-family: Arial; /* Change &quot;Arial&quot; to your desired font family */
+font-size: 34px; /* Change &quot;14px&quot; to your desired font size */
+</string>
+       </property>
+       <property name="text">
+        <string>Login</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_3">
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>1611</width>
+         <height>901</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../6706379_3418448 (4).png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>160</y>
+         <width>911</width>
+         <height>611</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../17893271_5931274-removebg-preview (1).png</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="course_ending_8">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>340</y>
+         <width>551</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>-1</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+color: rgb(85, 170, 255);
+font-family: Arial; /* Change &quot;Arial&quot; to your desired font family */
+font-size: 34px; /* Change &quot;14px&quot; to your desired font size */</string>
+       </property>
+       <property name="text">
+        <string>Réinitialiser votre mot de passe</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_password_4">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>410</y>
+         <width>271</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Mot de passe</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>480</y>
+         <width>201</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Calibri</family>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Confirmer</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
