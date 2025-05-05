@@ -47,7 +47,11 @@
       </rect>
      </property>
      <property name="currentIndex">
+<<<<<<< HEAD
       <number>0</number>
+=======
+      <number>2</number>
+>>>>>>> 1ef526ce3d4a5b5ac7518f95db20ca4d5e511ce8
      </property>
      <widget class="QWidget" name="page">
       <widget class="QLabel" name="label">
